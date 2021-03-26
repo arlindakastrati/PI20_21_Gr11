@@ -1,0 +1,139 @@
+body{
+    font-style: Arial;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    background-color:rgb(126, 164, 179);
+    font-family: Arial;
+}
+
+
+body h1{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(7, 72, 102);
+    text-shadow:1px 6px 10px aliceblue ;
+}
+
+body h3{
+    text-align: start;
+    font-size: 40px;
+    color:rgb(6, 82, 117);
+}
+body p{
+    font-size: 22px;
+    text-align: start;
+    color: white;
+}
+body ul li{
+    font-size:20px;
+    
+}
+
+p.spechhh {
+    position: relative;
+    width: 520px;
+    height: 320px;
+    left:890px;
+    top:-320px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #feb236;
+    border: 10px solid #feb236;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: black;
+    
+  }
+
+p.spechhhh {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    left:850px;
+    top:-350px;
+    text-align: center;
+    line-height: 100px;
+    background-color:lightblue;
+    border: 10px solid lightblue;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: black;
+    
+  }
+
+p.specch{
+    position: relative;
+    width:640px;
+    height: 300px;
+    left:850px;
+    top:-350px;
+    text-align:center;
+    line-height: 100px;
+    background-color: yellow;
+    border:15 px solid yellow;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: black;
+
+
+}
+
+
+p.speccch{
+    position: relative;
+    width:605px;
+    height: 250px;
+    left:850px;
+    top:-350px;
+    text-align:center;
+    line-height: 100px;
+    background-color: rgb(0, 255, 136);
+    border:10 px solid rgb(0, 255, 136);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: black;
+
+
+}
+
+p.specccch{
+    position: relative;
+    width:540px;
+    height: 250px;
+    left:850px;
+    top:-350px;
+    text-align:center;
+    line-height: 10px;
+    background-color: rgb(0, 204, 255);
+    border:10 px solid rgb(50, 155, 82);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: black;
+
+
+}
+
+p.speccccch{
+    position: relative;
+    width:500px;
+    height: 230px;
+    left:850px;
+    top:-350px;
+    text-align:center;
+    line-height: 10px;
+    background-color: rgb(221, 182, 224);
+    border:10 px solid rgb(150, 97, 211);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: black;
+
+
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="loopfunction.css">
+        <title>Loop and Function in C++</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+       <script type="text/javascript">
+            var now = new Date();
+            var hours = now.getHours();
+            document.bgColor="#CC9900";
+            //8-18 day
+            if (hours > 7 && hours < 15){
+             document.write ('<body style="background-color: rgb(126,164,179);">');
+            }
+            //15-23 night
+            else if (hours > 15 && hours < 23){
+             document.write ('<body style="background-color: rgb(76, 101, 112);">');
+            }
+            else{
+             document.write ('<body style="background-color: rgb(100 146 163);">')
+             ;}
+
+             function myfunction(){
+                 var text="LOOP STATMENTS";
+                 documnet.write("<h2>"+text+"</h2>");
+             }
+            </script>
+             <script src= 
+             "https://code.jquery.com/jquery-1.12.4.min.js"> 
+             </script> 
+             <script>
+                 $(document).ready(function(){
+                     $("#flip").click(function(){
+                         $("#panel").slideDown("slow");
+                     })
+                 })
+             </script>
+     <h1 id="h1">LOOP AND FUNCTION IN C++</h1><br><br>
+        <h1 style="text-align:center; font-size:40px; color:rgb(7,72,103);">Loops in C++</h1><hr>
+        <div class="loops">
+            <article>
+                <br>
+                Loop statements in C++ execute the certain block of the code or statement 
+                multiple times, mainly used to reduce the length of the code by executing 
+                the same function multiple times, reduce the redundancy of the code.<br>
+                In the programming world, the loop is a control structure that is used when 
+                we want to execute a block of code, multiple times. It usually continues to
+                run until and unless some end condition is fulfilled.
+            </article>
+            <p>
+                Now that we have seen how a Loop works, let us make it clearer by going through
+                 the types of Loops out there. In C++ programming, we have three types of Loops 
+                 in C++ :
+                 <div id="flip">Types of loops</div>
+                 <div id="panel">
+                <ul>
+                    <li>For Loop</li>
+                    <li>While Loop</li>
+                    <li>Do While Loop</li>
+                </ul>
+            </div>
+            </p>
+        </div>
+        <br><br>
+        <div class="loop">
+               <h2 >For Loop</h2>
+                <p>
+                    Loop is an entry controlled loop, meaning that the condition specified by us is 
+                    verified before entering the loop block. <br>It is a repetition control structure. 
+                    The loop written by us is run a specified number of times.
+                    To control the loop, we use a loop variable in For loop.<br> This variable is first 
+                    initialized to some value, then we perform the check on this variable comparing 
+                    it to the counter variable, and finally, we update the loop variable.
+                </p>
+                <p id="syntax" >
+                   <strong>Syntax:</strong><br><br>
+                    <code>
+                         for(initialization expression; test expression; update expression)<br>
+                           {
+                         // statements to execute in the loop body
+                        }<br>
+                    </code> </p>
+        </div>
+                <p style="font-size:150%">Let us look at an example of for loop:</p>
+                <img src="loop1.png" alt="loop1" style="width:500px;">
+                <p id="output"><b>Output:</b> <br><br>
+                <img src="loop1.1.png" alt="loop1" style="width:200px; height:200px;">
+                </p>
+            <br><br>
+            <div class="loop2">
+                <h2>While Loop</h2>
+                <script>
+                    var data = 'While Loop ';
+                    var regExp = /loop/i;
+                    var found = data.match(regExp);
+                    console.log(found);
+                    </script>
+                <p>
+                    While loop is also an entry controlled loop, where we verify the condition specified by us,
+                    before running the loop.<br> The difference is being that we use For loops when we know the number
+                    of times the body of the loop needs to run, whereas we use while loops in <br>circumstances when
+                    beforehand we do not know the precise number of times the body of the loop needs to run.<br> The 
+                    execution of the loop is terminated based on the test condition.
+                </p>
+             <p id="syntax1">
+                <strong>Syntax:</strong><br><br>
+                <code>
+                    while (test_expression)<br>
+                    {
+                    // statements to execute in the loop body<br>
+                    update_expression;
+                    }<br>
+                </code>
+              </p> <br> 
+            </div>
+                <img src="while.png">
+                <p style="font-size: 150%;" >Let us look at an example of while loop: </p>
+                <img src="loop2.png" alt="loop">
+                
+                <p id="output1"><b>Output:</b><br><br>
+                <img src="loop2.1.png" alt="loop2" style="width:222px; height:200px;">
+                </p><br><br>
+            
+            <div class="loop3">
+                <h2>Do While Loop</h2>
+                <p>
+                    Do while loop is an exit controlled loop, meaning the test condition is verified after
+                    the execution of the loop, at the end of the body of the loop.<br> Hence, the body executes 
+                    at least once, regardless of the result of the test condition, whether it is true or false.
+                    This happens to be the foremost difference<br> in between while loop and do while. In while loop,
+                    the condition is tested beforehand, whereas in do while loop the condition is verified at the 
+                    finish of body of the loop.
+                </p>
+                <p id="syntax2">
+                  <strong>Syntax:</strong><br>
+                     <code>
+                     do<br>
+                     {<br>
+                     // statements to execute in the loop body<br>
+                     update_expression;<br>
+                       }<br>
+                      while (test_expression);<br>
+                    </code>  
+                   <br>
+                </p></div>
+                <img src="while.png">
+                <br>
+                <p style="font-size:150%">Let us look at an example of do while loop: </p>
+                <img src="loop3.png" alt="loop3">
+                <p id="output2"><b>Output:</b><br><br>
+                <img src="loop3.1.png" alt="loop3" style="width:200px; height:50px; margin-right:93px;">
+                </p><br><br><br>
+            <br><br>
+            <h1 style="text-align:center; color:rgb(7,72,102); font-size:40px;"> Function in C++</h1><hr><br><br>
+            <div class="ID">
+            <p>
+                A function is a group of statements that together perform a task. Every C++ program has at least 
+                one function, which is <span style="color: rgb(6,82,117)">main()</span>, and all the most trivial programs<br> can define additional functions.
+                You can divide up your code into separate functions. How you divide up your code among different 
+                functions is up to you, but logically the division usually<br> is such that each function performs a 
+                specific task. A function <span style="color: rgb(6,82,117)">declaration</span> tells the compiler about a function's<br> name, return type, 
+                and parameters. A function <span style="color: rgb(6,82,117)">definition</span> provides the actual body of the function.
+            </p><br><br></div>
+            <h2 style="color: rgb(6,82,117)">Defining a Function</h2>
+            <p id="syntax3">
+                The general form of a C++ function definition is as follows −<br><br>
+                <code>return_type function_name( parameter list ) {<br>
+                    body of the function
+                    }</code>
+            </p> <div class="ID">
+                <br><br>
+                A C++ function definition consists of a function header and a function body. Here are all the parts of a function −
+                <br><br>
+                <ul  id="id">
+                    <li><span style="color:rgb(110, 43, 40)">Return Type </span>− A function may return a value. The <span style="color: rgb(6,82,117)">return_type</span>
+                         is the data type of the value the function returns.
+                         Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword <span style="color:rgb(95, 153, 88)">void</span>.</li>
+                    <li>
+                        <span style="color:rgb(110, 43, 40)">Function Name </span>− This is the actual name of the function. The function name and the parameter list together constitute the function signature.
+                    </li>
+                    <li>
+                        <span style="color:rgb(110, 43, 40)">Parameters</span> − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list 
+                        refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.
+                    </li>
+                    <li>
+                        <span style="color:rgb(110, 43, 40)">Function Body </span>− The function body contains a collection of statements that define what the function does.
+                    </li>
+                 </ul>
+                 <br><br></div>
+                 <img src="Function-declaration.jpg"><br><br><br>
+                    <p  style="font-size:150%;">A simple function example:<br><br>
+                    <img src="function1.1.png">
+                    <p id="output3"><b>Output:</b><br>
+                      <img src="function1.2.png" style="width:102px; height:28px; margin-top:54px;" >
+                      </p>
+                    </p><br><br><br><br>
+                <h2>Types of function</h2>
+            <div class="ID"><br><br>
+                 We have two types of function in C++:<br><br>
+                <ol>
+                    <li>Built-in function</li>
+                    <li>User-defined function</li><br><br><br><br><br><br><br>
+                    <img src="types_of_functions_cpp.jpg" style="float:right; margin-top:-18%; margin-right:364px;width:323px;" ><br>
+                    <br><br>
+                    <ol>
+                        <li>Built-in function</li>
+                        <br>
+                         Built-in functions are also known as library functions. We need not to declare and define these functions as they are already written in the C++ libraries such as iostream, cmath etc. We can directly call them when we need.
+                         <br><br>
+                         <br>Example:<br><br>
+                         <img src="function1.3.png">
+                    
+                        <p id="output4"><b>Output:</b><br><br>
+                        <img src="function1.4.png" style="width:70px; height:50px;">
+                        </p>
+                        <br><br>
+                        <li>User-defined function </li><br>
+                        We have already seen user-defined functions, the example we have given at the beginning of this tutorial is an example of user-defined function. The functions that we declare and write in our programs are user-defined 
+                        functions. Lets see another example of user-defined functions.<br><br>
+                        <img src="user_definedfunc.png" border="2px solid black" width="740px" box-sizing="border-box">
+                    </ol> 
+                </ol> 
+            </div>
+                        <br><br>
+                        <h3 style="font-size:23px">Example 1:</h3><br><br>
+                        <img src="function1.5.png">
+                        <br>
+                        <p id="output5"><b>Output:</b><br><br>
+                        <img src="function1.6.png" style="width:400px; height:90px; margin-right:-245px;">
+                        </p>
+                        <br><br>
+            
+                <h3 style="font-size:23px;">Example 2: </h3>
+                <img src="function1.7.png">
+                <div>
+                <div class="enter">
+                <p > Enter the answer:</p>
+                <input id="demo" type="text">
+                <button type="button" onclick="myfunction()">Submit</button>
+                <p id="p1"></p></div>
+                <script>
+                    function myfunction(){
+                    var message,z; 
+                    message=document.getElementById("p1");
+                    message.innerHTML="";
+                    z=document.getElementById("demo").value;
+                    try{
+                        if(z==" ") throw " its embty";
+                        if(isNaN(z)) throw " is not a number";
+                        z=Number(z);
+                        if(z>8) throw "  it's too hight";
+                        if(z<8) throw " it's too low";
+                        if(z=8) throw " it's correct";
+                        }
+                        catch(err){
+                            message.innerHTML="Input"+err;
+                        }
+                        finally{
+                            document.getElementById("demo").value=" ";
+                        }
+                    }
+                </script>
+                </div>
+    </body>
+    <foot>
+        <br><br>
+        <audio controls id="audio">
+            <source src="Music2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element
+        </audio>
+
+        <p id="data"></p>
+        <script>
+            var d=new Date();
+            document.getElementById("data").innerHTML=d;
+          </script>
+    </foot>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The syntax of Java </title>
+        <style>
+            h1{
+                color: rgb(7, 72, 102);
+            }
+            h2{
+                color:rgb(6, 82, 117);
+            }
+            h4{width:650px;margin-left: 780px;
+                color:rgb(13, 118, 167);
+            }
+            .dots{
+                margin-top: -510px;
+            }
+
+            .dots p{border:solid;border-color:  rgb(38, 115, 141);
+             width:650px;margin-left: 780px; background-color: lightblue;color: black;
+           
+            }
+        </style>
+        <script>
+            var r = confirm("Are you sure you want to continue on this page?");
+            if (r == true) {
+            
+                x = "Click OK to go the page.";
+            
+            } else {
+            
+                x = "Click OK to finish.";
+            
+            }
+            alert (x);
+        </script>
+        
+    </head>
+    <body style="font-size: 22px; margin-left: 70px;margin-right: 70px; background-color:rgb(126, 164, 179);">
+        <h1>Understanding Java</h1>
+
+        <p style="width: 700px; margin-top: 60px;border: solid 4px;
+        border-color:  rgb(38, 115, 141);  background-color: aliceblue;">As we said earlier,computers only understand 0s and 1s.At the same time,humans are not usually able to express instructions,let alone complex
+            programs only in )s and 1s, hence the need for higher level programming languages.We believe that the general ideas is that there is a third party
+            in play,which meditates between computers and programmers.This party basically translates whatever instruction human write,into a language that computers
+            understand(namely 0s and 1s).We call this process of translation,compilation and this "third party"compilers.
+        </p>
+        <p style="width: 700px; border: solid 4px;margin-top: 30px;
+        border-color:  rgb(38, 115, 141);   background-color: aliceblue;">Basically, what compliers do boils down to translating from one language to another.So, in a typical programming language,the compiler
+            would take the program you write in a higher level programming language, and translate that to 0s and 1s so that the computer 
+            can execute it. At the same time, comppilers do a through check of your codes to spot any possible mistakes and alert you before-hand.
+        </p>
+        <figure>
+        <img src="java1.jpg" alt="javatext"  width="640px;" height="460;" style="margin-left: 750px;margin-top: -550px; ">
+        <figcaption style="margin-left: 1000px;">Binary Numbers</figcaption>
+       </figure>
+        <figure>
+        <img src="java2.jpg" alt="javatext"  width="650px;" height="400;" >
+        <figcaption style="margin-left: 200px;">Compiler</figcaption>
+        </figure>
+        <h2 style="margin-left: 850px; margin-top: -430px;">Program compilation in Java</h2>
+        <p style=" width:650px;margin-left: 780px;border: solid 4px;
+        border-color:  rgb(38, 115, 141); background-color: aliceblue;">Java is slightly different from
+             typical programming languages,in that the code is not directly translated into code that is understood by
+            machines. Java has an interesting selling point, in that programs that are written in Java designed to run on different machines(with different
+            operating systems). There is even a motto that says "write once,run anywhere".Typically, with other programming languages, you'd end up writing 
+            a program for Windows, and then rewriting it in for another platform(such as Mac OS). As you understand,this is not very practical, as today There
+            are at least 3-4 different operating systems(platforms) that users prefer to use, and having to write a copy of your program for each of them is not
+            a trival task, especially if the program is complex, such as Microsoft Word.
+
+        </p>
+        <p style=" margin-top:30px;border: solid 4px;
+        border-color:  rgb(38, 115, 141);  background-color: aliceblue;">In order to enable the "write once run anywhere" 
+            paradigm,Java introduces the concept of JVM(Java Virtual Machine).To put simply, this is a program
+            that must be installed in your computer in order to run programs written in Java. Fortunately, most computers come with Java preinstalled,
+            however it is very easy to install if not present.
+        </p>
+        <p style="border: solid 4px;
+        border-color:  rgb(38, 115, 141);  background-color: aliceblue;">In Java, it is the JVMs responsibility to
+             abstract underlying operating system differences and intricacies and translate code to something that 
+            the specific machine can understand. Hence, when we compile our Java programs,we are not actually compiling them to 0s and 1s, rather to an 
+            intermediary language called byte code, that the JVM is able to understand and interpret it differently depending on the platform it is installed.
+        </p>
+        <figure>
+        <img src="java4.jpg" alt="javatext"  width="650px;" height="350;" style="margin-top: 100px;" >
+        <figcaption style="margin-left: 200px;">The circle of java </figcaption>
+        </figure>
+
+        <div class="dots">
+        
+
+        <p >To summarize the above, there are three steps to be followed whenever we are writing any simple or complex 
+            programs:</p>
+            <h4>1. Write it</h4>
+        <p > At this step, we write the program in Java, using a simple editor(such as Notepad). Professional programmers usually use 
+            something more complex such as an IDE(Integrated Development Environment) to help them with repetitive tasks, however a simple editor should be more
+            than enough for us.</p>
+          <h4 >2. Compile it</h4>
+        <p > At this step, we invoke the services of another program(the compiler) to translate our source code to byte code, so that 
+            the JVM can execute it.</p>
+        
+          <h4 >3. Run(execute) it</h4>
+         <p> After we've compiled the source code successfully,we tell the computer to execute the instructions 
+            using JVM.</p>
+        </div>
+       
+
+        <h2 style="margin-top: 30px;">Compiling and Running Java Programs</h2>
+
+        <p>Video lecture:</p>
+        <video width="620" height="420" style="margin-top:10px ;" controls>
+            <source src="Java2.mp4" type="video/mp4">
+            </video>
+
+        <h2 style=" width:650px;margin-left: 800px;margin-top: -550px;">Our first program</h2>
+        <p style=" width:650px;margin-left: 800px;">Video lecture: </p>
+        <video width="620" height="420" style="margin-left:820px ;" controls>
+            <source src="Java3.mp4" type="video/mp4">
+            </video>
+        
+        <h2 style="margin-top: 30px;">Printing to console</h2>
+        <p style="border: solid 4px;
+        border-color:  rgb(38, 115, 141);   background-color: aliceblue;">If you have watched the video lecture ,you will see that there is already a program written there, which
+            looks something like this:
+        </p>
+        <img src="java5.jpg" alt="javatext"  width="650px;" height="150;" style="margin-top: 10px;" >
+
+
+        <p style="border: solid 4px;
+        border-color:  rgb(38, 115, 141);  background-color: aliceblue;">This is our first , and very simple program, that does nothing more than print <mark style="background-color: lightblue;">
+        "Hello World".</mark> The console is a text box where the output of our program is printed and is named differently in different operating
+         systems. For example in Windows, they call it <b>Command Prompt</b> where as in othere systems(such as Mac IOS) it is called
+        <b>Terminal</b> The important thing to know is that this place from where we can run our programs,observe the output that is generated
+        from our programs, and even provide input to them either before or during their execution.</p>
+
+        <p style="border: solid 4px;
+        border-color:  rgb(38, 115, 141);  background-color: aliceblue;">There are two ways to call <b>println</b> with or without arguments.</p>
+        <img src="java6.jpg" alt="javatext"  width="650px;" height="130;" style="margin-top: 10px;" >
+        <img src="java7.jpg" alt="javatext"  width="650px;" height="130;" style="margin-top: 10px; margin-left: 100px;" >
+        
+        
+            <p style="border: solid 4px;
+            border-color:  rgb(38, 115, 141); 
+              border-radius:10px;
+              background-color: lightblue;
+              ">
+              "My original postulate, which I have been pursuing as a scientist all my life, 
+                is that one uses the criteria of correctness as a means of converging on a decent 
+                programming language design one which doesn’t set traps for its users, and ones 
+                in which the different components of the program correspond clearly to different 
+                components of its specification, so you can reason compositionally about it. [...] 
+                The tools, including the compiler, have to be based on some theory of what it means 
+                to write a correct program."       <b id="authname">Grace Hopper</b> <button onclick="this.disabled =true,mytion()" style="bottom: 5px;border: solid 2px;
+                border-color:  rgb(38, 115, 141); 
+                  border-radius:10px;
+                  background-color:aliceblue;height: 25px; top:-2px;" >Long name</button></p>
+
+    </body>
+    <p id="data" style=" border: none; background-color:rgb(126, 164, 179);"></p>
+           <script>
+            var d = new Date();
+            document.getElementById("data").innerHTML=d;
+            function mytion() {
+            var name = document.getElementById("authname").innerHTML; 
+            var replacename = name.replace("Hopper", "Brewster Murray Hopper");
+            document.getElementById("authname").innerHTML = replacename;}
+               
+           </script>
+
+    </html>

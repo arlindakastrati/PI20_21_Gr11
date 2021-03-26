@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        body{
+            margin: 50px 50px;
+            font-size: 22px;
+            background-color:rgb(126, 164, 179); 
+        }
+        h1{
+            color: rgb(7, 72, 102);
+            text-align: center;
+            font-size: 50px;
+        }
+        h2{
+            color:rgb(6, 82, 117);
+            font-size: 40px;
+            
+        }
+        h3{
+            color: white;
+        }
+        p{border: solid 4px;
+        border-color:  rgb(38, 115, 141); background-color: aliceblue;} ul{border: solid 4px;
+        border-color:  rgb(38, 115, 141); background-color: aliceblue; width: 650px;}
+        
+    </style>
+
+    </head>
+
+
+    <body>
+        <h1>Loops</h1>
+        
+
+        <h2>Introduction</h2>
+        <p>A loop can be used to tell a program to execute statements repeatedly.</p>
+
+        <p>Suppose that you need to display a string (e.g.,<b>Welcome to Java!</b>) a hundred times. It
+            would be tedious to have to write the following statement a hundred times.</p>
+        
+        <p>So, how do you solve this problem?
+            Java provides a powerful construct called a loop that controls how many times an operation
+            or a sequence of operations is performed in succession. Using a loop statement, you simply
+            tell the computer to display a string a hundred times without having to code the print statement
+            a hundred times, as follows:</p>
+
+
+        <p>The variable <mark style="color: rgb(16, 161, 209);background-color:aliceblue;"> count</mark> is initially <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">0.</mark>
+           The loop checks whether <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">count < 100</mark> is <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;"> true.</mark>
+            If so, it executes the loop body to display the message <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">Welcome to Java!</mark> and increments  
+            <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">count </mark>by <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;"> 1.</mark>
+            It repeatedly executes the loop body until <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">count < 100</mark> becomes <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">false.</mark>
+            When <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">count < 100</mark> is <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">false < 100</mark>(i.e., when <mark style="color:  rgb(16, 161, 209);
+            background-color: aliceblue;">count</mark> reaches <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">100</mark>), the loop terminates and the next statement
+            after the loop statement is executed.</p>
+
+        <p style="width: 450px;">Loops are constructs that control repeated executions of a block of statements. The concept
+            of looping is fundamental to programming. </p>
+        
+        <p style="width: 450px;">Java provides three types of loop statements:</p>
+        <ul style="width: 410px;">
+            <li>while loops</li>
+            <li>do-while loops</li>
+            <li>for loops</li>
+        </ul>
+        <img src="jp3.12.png" alt="java"  width="750px;" height="580;" style="margin-left: 620px; margin-top: -250px;" >
+      
+
+
+        <h2 style="margin-top: -300px;">The while Loop</h2>
+        <p style="width: 450px;">A <u>while</u> loop executes statements repeatedly while the condition is true.</p>
+
+        <p style="width: 450px;">The syntax for the while loop is:</p>
+        <img src="jp3.1.jpg" alt="javawhiile"  width="400px;" height="180;" >
+         <p > The part of the loop that contains the statements to be repeated is called the loop body.
+            A one-time execution of a loop body is referred to as an iteration (or repetition) of the 
+            loop.</p>
+            <p style="width: 700px;"> Each loop contains a loop-continuation-condition, a Boolean expression that controls
+            the execution of the body. It is evaluated each time to determine if the loop body is executed.</p>
+        
+        <p style="width: 700px;"> If its evaluation is <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">true,</mark> the loop body is executed;
+            if its evaluation is <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">false</mark>, the entire loop terminates 
+            and the program control turns to the statement that follows the <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">while</mark> loop.</p>
+
+        <p style="width: 700px;">The loop for displaying <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">Welcome to Java!</mark> a hundred times
+            introduced in the preceding section is an example of a <mark style="color:  rgb(16, 161, 209);background-color: aliceblue;">while</mark> loop.</p>
+        <img src="jp3.2.jpg" alt="javawhile"  width="650px;" height="320;" style="margin-left:830px;margin-top:-490px;" >
+        
+        <h2 style="margin-top: -20px;">The do while Loop</h2>
+        <p> A <u>do-while</u> loop is the same as a while loop except that it executes the loop body
+            first and then checks the loop continuation condition</p>
+
+        <p style="width: 600px;">The do-while loop is a variation of the while loop. Its syntax is:</p>
+        <img src="jp3.3.jpg" alt="javawhile"  width="400px;" height="180;" style="margin-left:200px" >
+        <p style="width: 600px;">The loop body is executed first, and then the loop-continuation-condition is evaluated. 
+            If the evaluation is true, the loop body is executed again; if it is false, the do-while loop terminates.</p>
+        <img src="jp3.4.jpg" alt="javawhile"  width="500px;" height="350;" style="margin-left:830px;margin-top: -340px; " >
+
+        <p>The do-while loop executes the loop body first, then checks the loopcontinuation-condition
+             to determine whether to continue or terminate the loop.</p>
+
+        <h2>The for Loop</h2>
+        <p style="width: 700px;"> A <u>for</u> loop has a concise syntax for writing loops</p>
+        <p style="width: 700px;">In general, the syntax of a for loop is:</p>
+        <img src="jp3.5.jpg" alt="javawhile"  width="400px;" height="180;" >
+        <p style="width: 700px;">The flowchart of the for loop is shown in right-figure:</p>
+        <img src="jp3.6.jpg" alt="javawhile"  width="700px;" height="500;" style="margin-left: 780px;margin-top:-430px;" >
+        <p>The for loop statement starts with the keyword for, followed by a pair of parentheses 
+            enclosing the control structure of the loop. This structure consists of initial-action,
+            loop-continuation-condition, and action-after-each-iteration. The control
+            structure is followed by the loop body enclosed inside braces. The initial-action, 
+            loopcontinuation-condition, and action-after-each-iteration are separated by semicolons.</p>
+
+
+
+        <h1>Methods</h1>
+        <p>Methods can be used to define reusable code and organize and simplify coding.</p>
+
+        <p>Suppose that you need to find the sum of integers from 1 to 10, from 20 to 37, and from 35
+            to 49, respectively. You may write the code as follows:</p>
+        <img src="jp3.7.jpg" alt="javamethods"  width="600px;" height="300;" >
+    
+        <p style="width: 700px; margin-left:750px;margin-top: -200px;">You may have observed that computing these sums from 1 to 10, from 20 to 37, and from
+            35 to 49 are very similar except that the starting and ending integers are different. Wouldn’t
+            it be nice if we could write the common code once and reuse it? We can do so by defining a
+            method and invoking it.</p>
+        <p style="width:700px; margin-left:750px;">The preceding code can be simplified as follows:</p>
+   
+        <p style="width: 700px;margin-top: 100px;">A method is a collection of statements grouped together to perform an operation. In earlier chapters you have used predefined methods such as System.out.println, System.exit, Math
+            .pow, and Math.random. These methods are defined in the Java library. In this chapter, you will
+            learn how to define your own methods and apply method abstraction to solve complex problems.
+            </p>
+        <img src="jp3.8.jpg" alt="javamethods"  width="600px;" height="300;"style="margin-left:800px;margin-top: -200px;" >
+ 
+        <h2 style="margin-top: -100px;">Defining a Method</h2>
+        <p style="width:700px;">A method definition consists of its method name, parameters, return value type, and body.</p>
+
+        <p style="width:700px;">The syntax for defining a method is as follows:</p>
+        <img src="jp3.9.jpg" alt="javamethods"  width="500px;" height="180;" >
+        <p style="width:700px;">Let’s look at a method defined to find the larger between two integers. This method, named
+            max, has two int parameters, num1 and num2, the larger of which is returned by the method.
+            The figure below illustrates the components of this method.</p>
+        
+         <img src="jp3.10.jpg" alt="javamethods"  width="600px;" height="340;" style="margin-left:840px; margin-top:-350px;" >
+
+        <p>A method may return a value. The returnValueType is the data type of the value the
+            method returns. Some methods perform desired operations without returning a value. In this
+            case, the returnValueType is the keyword void. For example, the returnValueType
+            is void in the main method, as well as in System.exit, and System.out.println. If
+            a method returns a value, it is called a value-returning method; otherwise it is called a void
+            method.</p>
+        
+        <p>The variables defined in the method header are known as formal parameters or simply
+            parameters. A parameter is like a placeholder: when a method is invoked, you pass a value
+            to the parameter. This value is referred to as an actual parameter or argument. The parameter list refers to the method’s type, order, and number of the parameters. The method name
+            and the parameter list together constitute the method signature. Parameters are optional; that
+            is, a method may contain no parameters. For example, the Math.random() method has no
+            parameters.</p>
+
+        <p>The method body contains a collection of statements that implement the method. The
+            method body of the max method uses an if statement to determine which number is larger
+            and return the value of that number. In order for a value-returning method to return a result, a
+            return statement using the keyword return is required. The method terminates when a return
+            statement is executed.</p>
+
+
+        <h2>Calling a method</h2>
+        <p style="width: 700px;">Calling a method executes the code in the method.</p>
+
+        <p style="width: 700px;">In a method definition, you define what the method is to do. To execute the method, you have
+            to call or invoke it. There are two ways to call a method, depending on whether the method
+            returns a value or not.</p>
+        <img src="jp3.11.jpg" alt="javamethods" width="450px;" height="150;" style="margin-left: 900px ; margin-top: -600px;">
+        
+
+        <p style="width: 700px;">If a method returns a value, a call to the method is usually treated as a value. For example:</p>
+             <p style="width: 700px; margin-left: 790px ;">calls max(3, 4) and assigns the result of the method to the variable larger. </p>
+        
+        <p>When a program calls a method, program control is transferred to the called method. A called
+            method returns control to the caller when its return statement is executed or when its 
+            methodending closing brace is reached</p>
+
+        <p>Each time a method is invoked, the system creates an activation record (also called an activation frame) that stores parameters and variables for the method and places the activation
+            record in an area of memory known as a call stack. A call stack is also known as an execution
+            stack, runtime stack, or machine stack, and it is often shortened to just “the stack.” When a
+            method calls another method, the caller’s activation record is kept intact, and a new activation
+            record is created for the new method called. When a method finishes its work and returns to
+            its caller, its activation record is removed from the call stack.</p>
+
+
+
+            <h3>If you want to learn more about Java, go and check the links below:</h3>
+        <ul>
+            <li><a href="https://www.codecademy.com/learn/learn-java/"target="_blank" >Codeacademy</a></li>
+            <li><a href="https://codegym.cc/" target="_blank">Code Gym</a></li>
+            <li><a href="https://www.edx.org/learn/java" target="_blank">Edx</a></li>
+            <li><a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">Java Tutorial</a></li>
+            <li><a href="https://www.w3schools.com/java/" target="_blank">W3Schools</a></li>
+            
+        </ul>
+
+        
+
+        
+      
+
+    </body>
+    <p id="data" style=" border: none; background-color:rgb(126, 164, 179);color: white;"></p>
+           <script>
+            var d = new Date();
+            document.getElementById("data").innerHTML=d;
+        </script>
+</html>

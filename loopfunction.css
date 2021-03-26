@@ -1,0 +1,75 @@
+body{
+    color:rgb(236, 241, 243);
+    font-family: system-ui;
+    text-align:left;
+    margin:70px 70px;;
+    padding:73px;
+    margin-bottom:-255px;
+
+}
+.loops, .loop, .loop2,.ID, .loop3, #syntax3{
+    background-color:rgba(157, 160, 163, 0.137);
+    color:rgb(252, 246, 246);
+    border-radius: 5%;
+    font-size: 22px;
+}
+#output, #output1, #output2,#output3,#output4,#output5{
+   float:right;
+   font-size:22px;
+   color:rgb(238, 240, 240);
+}
+ #audio{
+     float:right;
+     margin-bottom:-234px;
+ }
+ #h1{
+     text-align: center;
+     text-shadow: 5px 9px 10px aliceblue;
+     margin-top:-90px;
+     font-size:50px;
+     color:rgb(7,72,102);
+ }
+#id{
+    margin:auto;
+}
+#panel, #flip{
+    padding:5px;
+    text-align: center;
+    background-color: oranged;
+    border:solid 1px #c3c3c3;
+}
+#panel{
+    padding: 50px;
+    display: none;
+}
+h2{
+    text-align: left;
+    color:rgb(7,72,103);
+}
+#syntax,#syntax1, #syntax2,#syntax3{
+  text-align: center;
+}
+#syntax3{
+    font-size:22px;
+}
+#output3{
+   margin-top:-34%;
+   margin-right: 23%; 
+}
+#output4{
+    font-size:100% !important;
+    margin-top:-3%;
+    margin-right: 23%; 
+}
+#output5{
+    margin-top:-50%;
+    margin-left:84px;
+}
+#output,#output1, #output,#output3, #output5{
+    margin-right: 250px;
+}
+.enter{
+    float:right;
+    margin-top:-312px;
+    margin-right:344px;
+}
