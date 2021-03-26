@@ -1,0 +1,67 @@
+body{
+  background-color:rgb(126,164,179);
+  color:rgb(236, 241, 243);
+    font-family: system-ui;
+    text-align: left;
+    margin:70px 70px ;
+    font-size:22px;
+    
+}
+#output{
+    float:right;
+}
+#audio{
+  float:right;
+}
+#b{
+  float: right;
+  margin-top:33px;
+  margin-bottom: 34px;
+  margin-right:54px;
+  padding:30px 30px;
+  color:rgb(19, 139, 143);
+  background-color:rgb(30, 65, 82);
+  transform: skewX(20deg);
+  -ms-transform: skewX(20deg);
+  overflow: hidden;
+  resize: both;
+  border-radius: 50px;
+}
+h1{
+  text-align: center;
+  color:rgb(7,72,103);
+  text-shadow: 5px 6px 10px aliceblue;
+  font-size:50px;
+}
+#matrixs{
+  text-align: left;
+ 
+}
+ul,#id1{
+  background-color:rgba(157, 160, 163, 0.699);
+    color:rgb(235, 240, 243);
+    border-radius: 5%;
+    font-size: 22px;
+}
+h2{
+  color:  rgb(6,82,117);
+  font-size:40px;
+  
+}
+a:link{
+  color:rgb(87, 179, 87);
+}
+a:visited{
+  color:rgb(42, 90, 94);
+  background-color:transparent;
+  text-decoration:none;
+}
+a:active{
+  color:rgb(19, 59, 19);
+  background-color:transparent;
+  text-decoration: underline;
+}
+h3{
+  color:  rgb(6,82,117);
+  font-size:30px;
+}

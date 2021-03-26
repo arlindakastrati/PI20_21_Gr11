@@ -1,0 +1,95 @@
+body{
+    font-family: system-ui;
+    text-align: center;
+    margin:150px;
+    background-color:rgb(126,164,179);
+    color:rgb(236, 241, 243);
+    display:no-repeat;
+    text-align: left;
+    margin: 50px 50px;
+    font-size: 23px;
+
+}
+h1{
+    text-align: center;
+    color:rgb(7,72,103);
+    text-shadow: 5px 6px 10px aliceblue;
+    font-size: 50px;
+}
+.transform{
+
+    width:90px;
+    height:37px;
+    background-color:rgb(92, 226, 148);
+    margin-bottom:120px;
+    margin-top:-120px;
+    transition: all 2s ease-in-out;
+    float:left;
+    padding:20px;
+    border-radius:43px;
+    margin-left:1205px;
+    
+}
+.transform:hover{
+  transform: rotate(360deg);
+  background-color:rgb(9, 17, 88);
+}
+/* MOdelimi i linkut*/
+a:link{
+    color:green;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:visited{
+    color:rgb(36, 77, 116);
+    background-color:transparent;
+    text-decoration:none;
+}
+a:hover{
+    color:rgb(4, 0, 255);
+    background-color:transparent;
+    text-decoration:underline;
+}
+a:active{
+    color:rgb(0, 255, 0);
+    background-color:transparent;
+    text-decoration: underline;
+}
+
+.column{
+    float:left;
+    width: 33.33%;
+    padding:5px;
+    
+}
+.row::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+#table{
+    border: 9px solid rgb(13, 49, 65);
+}
+.ID{
+    background-color:rgba(157, 160, 163, 0.699);
+    color:rgb(235, 240, 243);
+    border-radius: 5%;
+    font-size: 22px;
+}
+#audio{
+    float:right;
+    margin-left:34px;
+}
+h2{
+    color:rgb(6,82,117);
+   
+}
+#ID, #ID1, #ID2{
+    background-color:rgba(157, 160, 163, 0.699);
+    color:rgb(235, 240, 243);
+    border-radius: 5%;
+    font-size: 22px;
+}
+#demo{
+    margin-top:-44px;
+}

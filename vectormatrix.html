@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vector and Matrix in c++</title>
+        <link rel="stylesheet" href="vectormatrix.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Vector and Matrix in C++</h1><br><br>
+        <div class="vector">
+            <h2 style="text-align: center;">Vector in C++</h2><hr>
+            <p style="background-color:rgba(157, 160, 163, 0.699);
+            color:rgb(235, 240, 243);
+            border-radius: 5%;
+            font-size: 22px;">
+                Vectors are same as dynamic arrays with the ability to resize itself automatically when an element
+                is inserted or deleted, with their storage being handled automatically by the container. Vector 
+                elements are placed in contiguous storage so that they can be accessed and traversed using iterators.
+                In vectors, data is inserted at the end. Inserting at the end takes differential time, as sometimes
+                there may be a need of extending the array. Removing the last element takes only constant time because
+                no resizing happens. Inserting and erasing at the beginning or in the middle is linear in time.
+            </p>
+
+            <h3 style="color: rgb(6,82,117);">Why Use Vectors in C++</h3>
+            <p style="background-color:rgba(157, 160, 163, 0.699);
+            color:rgb(235, 240, 243);
+            border-radius: 5%;
+            font-size: 22px;">
+                Vectors C++ are preferable when managing ever-changing data elements.
+                It is handy if you don’t know how big the data is beforehand since you don’t need to set the maximum size of the container. Since it’s
+                possible to resize C++ vectors, it offers better flexibility to handle dynamic elements.
+                C++ vectors offer excellent efficiency. It is a template class, which means no more typing in the same code to handle different data.
+                If you use vectors, you can copy and assign other vectors with ease. There are different ways to do that: using the iterative method, 
+                assignment operator =, an in-built function, or passing vector as a constructor.
+                In C++ vectors, automatic reallocation happens whenever the total amount of memory is used. This reallocation relates to how size and 
+                capacity function works.
+            </p><br>
+         </div>
+            <h3>How to Create C++ Vectors</h3>
+
+            <p style="background-color:rgba(157, 160, 163, 0.699);
+            color:rgb(235, 240, 243);
+            border-radius: 5%;
+            font-size: 22px;">
+                Vectors in C++ work by declaring which program uses them. The common syntax look like this:<br>
+                <span style="color:rgb(138, 83, 83)">vector /type/ variable (elements) </span><br>
+                For example:<br>
+                <span style="color:rgb(138, 83, 83)"> vector /int/ rooms(9)</span><br><br>
+                Let's break it down:
+                <ul id="ul">
+                    <li><span style="color:rgb(138, 83, 83)">type </span> defines a data type stored in a vector</li>
+                    <li><span style="color:rgb(138, 83, 83)">variables </span>is a name that you choose for the data</li>
+                    <li><span style="color:rgb(138, 83, 83)">elements </span>specified the number of elements for the data</li>
+                </ul>
+                <div id="id1">Basically, all the data elements are stored in contiguous storage. Whenever you want to access or move through the data, you can use iterators.
+            <br>The data elements in C++ vectors are inserted at the end. Use modifiers to insert new elements or delete existing ones.
+                </div>    
+        </p> <br><br>
+            <h3>Iterators</h3>
+            <p style="background-color:rgba(157, 160, 163, 0.699);
+            color:rgb(235, 240, 243);
+            border-radius: 5%;
+            font-size: 22px;">
+                An iterator allows you to access the data elements stored within the C++ vector.It is an object that functions as a pointer.<br> There are five types 
+                of iterators in C++: input, output, forward, bidirectional, and random access.
+                C++ vectors support random access iterators.<br> Here are a few function you may use with iterators for C++ vectors:
+                <ul>
+                    <li><span style="color:rgb(138, 83, 83)">begin() </span>-Returns an iterator pointing to the first element in the vector </li>
+                    <li><span style="color:rgb(138, 83, 83)">end() </span>-Returns an iterator pointing to the theoretical element that follows the last element in the vector </li>
+                    <li><span style="color:rgb(138, 83, 83)">rbegin() </span>-Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element </li>
+                    <li><span style="color:rgb(138, 83, 83)">rend() </span>-Returns a reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end) </li>
+                    <li><span style="color:rgb(138, 83, 83)">cbegin() </span>-Returns a constant iterator pointing to the first element in the vector.</li>
+                    <li><span style="color:rgb(138, 83, 83)">cend() </span>- Returns a constant iterator pointing to the theoretical element that follows the last element in the vector. </li>
+                    <li><span style="color:rgb(138, 83, 83)">crbegin() </span>-Returns a constant reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element </li>
+                    <li><span style="color:rgb(138, 83, 83)">crend() </span>- Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end) </li>
+                </ul>
+                <h3>Example: begin() </h3>
+                <img src="vector1.png" alt="vector" style="width:650px; height:440px; object-fit:auto;">
+                <p id="output"><b>Output:</b><br><br>
+                <img src="vector1.1.png" alt="" style="width:400px"> </p>
+                <button id="b" type="button">Hide output!</button>
+                <script type="text/javascript"> 
+                    $(document).ready(function() { 
+                        $("#b").click(function() { 
+                            $('#output').slideToggle("fast",function callback() { 
+                                $('#b').text("Show it!"); 
+                                alert("The output is going to hide")
+                            }); 
+                        }); 
+                    }); 
+                </script> 
+            </p><br><br>
+            <h3>Capacity</h3>
+            <ul>
+                <li><span style="color:rgb(138, 83, 83)">size() </span>-Returns the number of elements in the vector.</li>
+                    <li><span style="color:rgb(138, 83, 83)">max_size() </span>-Returns the maximum number of elements that the vector can hold. </li>
+                    <li><span style="color:rgb(138, 83, 83)">capacity() </span>-Returns the size of the storage space currently allocated to the vector expressed as number of elements. </li>
+                    <li><span style="color:rgb(138, 83, 83)">resize(n) </span>-Resizes the container so that it contains ‘n’ elements</li>
+                    <li><span style="color:rgb(138, 83, 83)">empty() </span>-Returns whether the container is empty.</li>
+                    <li><span style="color:rgb(138, 83, 83)">shrink_to_fit() </span>- Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity. </li>
+                    <li><span style="color:rgb(138, 83, 83)">reserve() </span>-Requests that the vector capacity be at least enough to contain n elements.</li>        
+            </ul>
+            <h3>Example: size()</h3>
+            <img src="vector2.png" alt="vector">
+            <p id="output"><b>Output:</b><br><br>
+                <img src="vector2.1.png" alt="vector2.1" style="width:244px; height:133px object-fit:auto;"> </p> 
+            <br><br><br>
+            <h3>Element access:</h3>
+            <ul>
+                <li><span style="color:rgb(138, 83, 83)">reference operator[g] </span>-Returns a reference to the element at position ‘g’ in the vector.</li>
+                    <li><span style="color:rgb(138, 83, 83)">at(g) </span>-Returns a reference to the element at position ‘g’ in the vector.</li>
+                    <li><span style="color:rgb(138, 83, 83)">front() </span>- Returns a reference to the first element in the vector.</li>
+                    <li><span style="color:rgb(138, 83, 83)">back() </span>-Returns a reference to the last element in the vector</li>
+                    <li><span style="color:rgb(138, 83, 83)">data() </span>-Returns a direct pointer to the memory array used internally by the vector to store 
+                        its owned elements.</li>  
+            </ul>
+            <h3>Example: front()</h3>
+            <img src="vector3.png" alt="vector">
+            <p id="output"><b>Output:</b><br><br>
+                <img src="vector3.1.png" alt="vector3.1"  style="width:300px; height:50px;" > </p> 
+            <br><br><br>
+            <h3>Modifiers:</h3>
+            <ul>
+                <li><span style="color:rgb(138, 83, 83)">assign()</span>-It assigns new value to the vector elements by replacing old ones</li>
+                <li><span style="color:rgb(138, 83, 83)">push_back() </span>-It push the elements into a vector from the back</li>
+                <li><span style="color:rgb(138, 83, 83)">pop_back() </span>-  It is used to pop or remove elements from a vector from the back.</li>
+                <li><span style="color:rgb(138, 83, 83)">insert() </span>-It inserts new elements before the element at the specified position</li>
+                <li><span style="color:rgb(138, 83, 83)">emplace() </span>-It extends the container by inserting new element at position.</li>
+                <li><span style="color:rgb(138, 83, 83)">emplace_back()</span>- It is used to insert a new element into the vector container,
+                     the new element is added to the end of the vector</li>
+                <li><span style="color:rgb(138, 83, 83)">erase() </span>- It is used to remove elements from a container from the specified position or range.</li>
+                <li><span style="color:rgb(138, 83, 83)">clear() </span>- It is used to remove all the elements of the vector container</li>
+               
+            </ul>
+            <h3>Example: assign()</h3>
+            <img src="vector4.png" alt="vector" style="width:633px;">
+            <p id="output"><b>Output:</b><br><br>
+                <img src="vector4.1.png" alt="vector4.1" style="width:300px; height:133px; margin-right:-3px;"  > </p> 
+            <br><br><br>
+            <h2 style="text-align: center;">Matrix in C++</h2><hr>
+            <p style="background-color:rgba(157, 160, 163, 0.699);
+            color:rgb(235, 240, 243);
+            border-radius: 5%;
+            font-size: 22px;">
+                The matrix is a two-dimensional array - with rows and columns.
+                A matrix is a rectangular array of numbers that is arranged in the form of rows and columns.
+                <br>In C++, we can create an array of an array, known as a multidimensional array.<br> For example:
+                <br>Here is the general form of a two Two-dimensional array declaration −<br><code>type arrayName [ x ][ y ];</code>
+                <br><br> For example:<br>
+                <img src="vector5.png"><br>
+                Here, x is a two-dimensional array. It can hold a maximum of 12 elements.
+                We can think of this array as a table with 3 rows and each row has 4 columns as shown below.
+                <br><br><img src="vector5.1.png"><br><br>
+                Three-dimensional arrays also work in a similar way.<br>
+                Multidimensional array declaration:<br>
+                <code>type name[size1][size2]...[sizeN]</code><br><br>
+                For example:<br>
+                <br><img src="vector5.2.png"><br>
+                <p id="setjquery">This array x can hold a maximum of:
+                <button id="BTN" style="background-color:rgb(108, 120, 133); border-radius:5px;">Show number!</button>   
+                </p>
+                <script>
+                    $(document).ready(function(){
+                        $("#BTN").click(function(){
+                            $("#setjquery").text("24 elements")
+                        })
+                    })
+                </script>
+                <br><br>
+            <h3>Multidimensional Array Initialization</h3>
+            
+            <div style="background-color:rgba(157, 160, 163, 0.699);
+            color:rgb(235, 240, 243);
+            border-radius: 5%;
+            font-size: 22px;"><br>
+                <p>Like a normal array, we can initialize a multidimensional array in more than one way.
+                    <ol>
+                        <li style="font-size:23px;">Initialization of two-dimensional array</li><br>
+                        <img src="martix1.png"><br>
+                         The above method is not preferred. A better way to initialize this array with
+                         the same array elements is given below:<br>
+                         <img src="matrix1.2.png"><br><br><br><br>
+                         <li style="font-size:23px;">Initialization of three-dimensional array</span></li>
+                         <br><img src="matrix1.3.png"><br>
+                         This is not a good way of initializing a three-dimensional array. A better way 
+                         to initialize this array is:<br>
+                         <img src="matrix1.4.png"><br>
+                         <div id="matrixs">
+                         Notice the dimensions of this three-dimensional array.
+                         The first dimension has the value 2.<br> So, the two elements comprising the first dimension are:
+                         <br>Element 1 = { {2,7,4,1}, {9,45,3,23}, {4,65,22,12} }
+                         <br>Element 2 = { {14,54,-23,34}, {54,12,33,-1}, {34,5,-6,5} } </div>
+                    </ol><br><br>
+                </p>
+                </div><br><br>
+                    <h3> Two Dimensional Array example:</h3>
+                    <br>
+                    <img src="matrix2.1.png" style="width:744px;">
+                    <p id="output"><b>Output:</b><br><br>
+                        <img src="matrix2.2.png" alt=""  style="width:300px; height:150px" > </p>
+                    <br><br>
+                    <p style="background-color:rgba(157, 160, 163, 0.699);
+                    color:rgb(235, 240, 243);
+                    border-radius: 5%;
+                    font-size: 22px;">In the above example, we have initialized a two-dimensional int array named test that has 3 "rows" 
+                    and 2 "columns".
+                    Here, we have used the nested for loop to display the array elements.
+                        Finally, we print the array elements in each iteration.
+                    </p>
+                     <div id="content"></div>
+                    <!-- Array in js-->
+                <script>
+                    let content=document.getElementById('content');
+                    let arr=["The outer loop from i == 0 to i == 2 access the rows of the array",
+                    "The inner loop from j == 0 to j == 1 access the columns of the array"];
+                    let list="<ul>";
+                        for(let i=0; i<arr.length;i++){
+                            list+="<li>"+arr[i]+"</li>";
+                        }
+                        list+="</ul>";
+                        content.innerHTML=list;
+                </script>
+                        <br><br>
+                        <h3> Three Dimensional Array example:</h3><br>
+                    <img src="matrix3.1.png" style="width:650px;">
+                    <p id="output"><b>Output:</b><br><br>
+                        <img src="matrix3.2.png" alt="vector4.1"  style="width:140px; height:273px"> </p>
+            <br><br>
+                    For more information on vector go to the page <a href="http://www.cplusplus.com/reference/vector/vector/" target="_blank">www.cplusplus.com</a>
+                    <br>
+                    For more information on matrix go to the page <a href="https://codescracker.com/cpp/program/cpp-program-three-dimensional-array.htm" target="_blank">codescracker.com</a>                 
+   
+                    <script>
+                        var data = 'Like a normal array, we can initialize a multidimensional array ';
+                        var regExp = /array/g;
+                        var found = data.match(regExp);
+                        console.log(found);
+                        </script>
+   
+      
+    </body>
+    <foot>
+        <audio controls id="audio">
+            <source src="Music2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element
+        </audio>
+        <p id="demo"></p>
+        <script>
+            var d=new Date();
+            document.getElementById("demo").innerHTML=d;
+          </script>
+    </foot>
+</html>

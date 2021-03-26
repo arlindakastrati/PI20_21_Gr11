@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+           Overview
+        </title>
+        <link rel="stylesheet" href="overview.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          </head>
+          <body>      
+        <div class="main">
+            <h1>Repeat what we learn</h1>
+            <div class="cl1_l">
+                First developed of c++ programming is Bjarne Stroustrup in 1979.
+                The name of C++ signifies the evolutionary nature of the changes from C. “++” is the C increment operator.
+            </div><br><br>
+            <h3 style="font-size: 23px;">Loops</h3>
+            <div class="cl2_c">
+                Loop statements in C++ execute the certain block of the code or statement multiple times, mainly used to reduce 
+                the length of the code by executing the same function multiple times, reduce the redundancy of the code.
+                In C++ programming, we have three types of Loops in C++ : <span style="color: rgb(55, 187, 55)">For loop, While Loop and Do While Loop</span>
+                We will now take some examples
+                <h3>Example 1</h3>
+                <img src="example1.png" alt="Example 1" style="width:500px; height:490px;">
+                <button id="showw">Solution</button>
+                <img src="example1.1.png" alt="Example1.1" id="example1"><br>
+                <script>
+                    $(document).ready(function(){
+                        $("#showw").click(function(){
+                            $("#example1").slideDown();
+                        })
+                    })
+                </script><br>
+                <h3>Example 3</h3>
+                <p>Find sum of positive numbers with While Loop:
+                    <ul>
+                    <li>program to find the sum of positive numbers</li>
+                    <li>if the user enters a negative number, the loop ends</li>
+                    <li>the negative number entered is not added to the sum</li>
+                    </ul>
+                </p>
+                <img src="example2.png" alt="example2" style="width:500px; height:3=490px;">
+                <button id="show">Solution</button>
+                <img src="example2.1.png" alt="example 2.1" id="example2">
+                <br>
+                <script>
+                    $(document).ready(function(){
+                        $("#show").click(function(){
+                            $("#example2").slideDown();
+                        })
+                    })
+                </script><br>
+                <h3>Example 2</h3>
+                <p>
+                    Displaying array elements using do-while loop
+                </p>
+                <img src="example3.png" alt="example3" style="width:500px; height:390px;">
+                <button id="show2">Solution</button>
+                <img src="example3.1.png" alt="example 3.1" id="example3">
+                <script>
+                    $(document).ready(function(){
+                        $("#show2").click(function(){
+                            $("#example3").slideDown();
+                        })
+                    })
+                </script>
+            </div>
+            <div class="cl3_r">
+                <h3>Function<br><br>Example 1</h3>
+                <p>Source Code to Add Two Complex Numbers</p>
+                <img src="example4.png" alt="example 4" style="width:520px; height:590px;">
+                <button id="show3">Solution</button>
+                <img src="example4.1.png" alt="example 4.1" id="example4">
+                <script>
+                    $(document).ready(function(){
+                        $("#show3").click(function(){
+                            $("#example4").slideDown();
+                        })
+                    })
+                </script>
+                <br><br>
+                <h3>Condition<br><br>Example 2 </h3>
+                <p>
+                    <span style="color:green; font-size:23px;">If.. else </span> condition.
+                    Let’s take our bakery example from above. In our example, if there are fewer than 15 bags in stock,
+                     the program prints a message to the console telling the baker that there are not enough bags of flour
+                      in inventory.
+                    Suppose that we want a message to appear notifying the baker that there are enough bags of flour in 
+                    inventory if there are 15 or more bags in stock. 
+                    The following code would tell the program to print a certain message to the console if there are enough bags of flour in inventory:
+                </p>
+                <img src="example5.png" alt="example5" style="width:600px; height:450px;">
+                <button id="show4">Solution</button>
+                <img src="example5.1.png" alt=" " id="example5">
+                <script>
+                    $(document).ready(function(){
+                        $("#show4").click(function(){
+                            $("#example5").slideDown();
+                        })
+                    })
+                </script>
+                <br><br>
+                <h3>Vector<br>Example 3 </h3>
+                <img src="example6.png" alt=" " style="width:500px; height:590px;">
+                <button id="show5">Solution</button>
+                <img src="example6.1.png" alt=" " id="example6">
+                <script>
+                    $(document).ready(function(){
+                        $("#show5").click(function(){
+                            $("#example6").slideDown();
+                        })
+                    })
+                </script>
+            </div>
+        </div><br><br><br>
+        <script type = "text/javascript">
+                 
+            if( sessionStorage.hits ) {
+               sessionStorage.hits = Number(sessionStorage.hits) +1;
+            } else {
+               sessionStorage.hits = 1;
+            }
+            document.write("<p>Total Hits:" + sessionStorage.hits +"</p>");
+         </script>
+    </body>
+</html>
