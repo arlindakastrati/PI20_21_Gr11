@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="uft-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>
+    Events
+  </title>
+  <style>
+    body {
+      background-image: url("night.jpg");
+      font-family: Arial, Helvetica, sans-serif;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: scroll;
+      background-color: rgb(30, 30, 31);
+      background-attachment: fixed;
+
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      background-color: none;
+      margin-left: 500px;
+      border-radius: 30px;
+
+    }
+
+    li {
+      float: left;
+      border-radius: 30px;
+
+    }
+
+    li a {
+
+      font-size: 25px;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 60px;
+      text-decoration: none;
+      border-radius: 30px;
+
+    }
+
+    li a:hover::after {
+      width: 100%;
+      background-color:#ff7f27;
+
+    }
+
+    li a::after {
+      content: '';
+      background: rgb(188, 202, 204); 
+      height: 2px;
+      width: 0;
+      display: block;
+      margin-top: 2px !important;
+      transition: width 1s;
+      margin: 0 auto;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 25px;
+      border: none;
+      outline: none;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      color: white;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color:#f9f9f9;
+      min-width: 100px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: rgb(76, 113, 136);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-radius: 30px;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(112, 98, 96, 0.164);
+      border-radius: 30px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      margin-top: 30px;
+      margin-left: 140px;
+      border-radius: 10px;
+      background-color: rgba(211, 211, 211, 0.2);
+      padding: 40px 40px 40px;
+      max-width: 1200px;
+      display: flex;
+    }
+
+    .container_image {
+      margin: auto;
+      border-radius: 8px;
+      width: 600px;
+      object-fit: contain;
+      align-self: flex-start;
+    }
+
+    .container_text {
+      flex: 1 1 auto;
+      color: white;
+      padding: 20px 40px;
+    }
+
+    #canvas {
+      margin-left: 550px;
+    }
+
+    #first {
+      display: inline;
+    }
+
+    #second {
+      display: flat;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    #sorry>p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 35px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: rgba(140, 151, 151, 0.4);
+      max-width: 1200px;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px white solid;
+      border-radius: 5px;
+      
+    }
+
+    #sorry>img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+      width: 12%;
+    }
+
+    .h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
+    }
+
+    .p {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      width: 140px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover
+    {
+        color: white;
+    }
+
+    #wht :hover
+    {
+        color:white;
+        
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <ul>
+      <div class="dropdown">
+        <button class="dropbtn">EVENTS</button>
+        <div class="dropdown-content">
+          <a href="events.html">TODAY</a>
+          <a href="upcoming.html">UPCOMING</a>
+        </div>
+      </div>
+      <li id="wht" style="margin-left: 45px;"><a href="experiences.html">EXPERIENCES</a></li>
+      <li id="wht"><a href="history.html">HISTORY</a></li>
+    </ul>
+  </div>
+  <br/>
+  <div id="first">
+
+    <div class="container">
+      <div class="container_text">
+        <h2 class="h2">Our events</h2>
+        <p class="p">We are a company that has partnerity with one of the best pages on web for doing events.
+          The <a href="https://www.eventbrite.com/d/online/events/" style="color: white;" target="_blank">EVENTBRITE</a>
+          company operates in many years all over the world doing more than 1000 events per year. </p>
+        <p class="p">Best team of trainers, managers and students. Qualitative staff, making trainings attractive.
+          Our certifikates are known in many countries of the world. Paid and free trainings at us.
+        </p>
+        <p class="p">
+          So, what are you waiting? Join us in any training you need while clicking the button down.
+        </p>
+        <a href="https://www.eventbrite.com/d/online/all-events/" target="_blank">
+          <button class="btn">MY TRAINING</button>
+        </a>
+      </div>
+      <img class="container_image" src="sandboxpic.png">
+    </div>
+
+    <div id="second">
+
+      <div id="sorry">
+        <img src="noevents.png" alt="No events today">
+        <p>
+          We keep adding new touches to keep a special events
+        </p>
+      </div>
+      <canvas id="canvas" width="450" height="450">
+      </canvas>
+      <script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        var r = c.height / 2;
+        ctx.translate(r, r);
+        r = r * 0.90
+        setInterval(drawClock, 1000);
+
+        function drawClock() {
+          drawFace(ctx, r);
+          drawNumbers(ctx, r);
+          drawTime(ctx, r);
+        }
+
+        function drawFace(ctx, r) {
+          var grad;
+          ctx.beginPath();
+          ctx.arc(0, 0, r, 0, 2 * Math.PI);
+          ctx.fillStyle = 'black';
+          ctx.fill();
+          grad = ctx.createRadialGradient(0, 0, r * 0.95, 0, 0, r * 1.05);
+          grad.addColorStop(0, '#333');
+          grad.addColorStop(0.5, 'white');
+          grad.addColorStop(1, '#333');
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = r * 0.1;
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(0, 0, r * 0.1, 0, 2 * Math.PI);
+          ctx.fillStyle = '#333';
+          ctx.fill();
+        }
+
+        function drawNumbers(ctx, r) {
+          var ang;
+          var num;
+          ctx.font = r * 0.15 + "px arial";
+          ctx.textBaseline = "middle";
+          ctx.textAlign = "center";
+          for (num = 1; num < 13; num++) {
+            ang = num * Math.PI / 6;
+            ctx.rotate(ang);
+            ctx.translate(0, -r * 0.85);
+            ctx.rotate(-ang);
+            ctx.fillText(num.toString(), 0, 0);
+            ctx.rotate(ang);
+            ctx.translate(0, r * 0.85);
+            ctx.rotate(-ang);
+          }
+        }
+
+        function drawTime(ctx, r) {
+          var now = new Date();
+          var hour = now.getHours();
+          var minute = now.getMinutes();
+          var second = now.getSeconds();
+          hour = hour % 12;
+          hour = (hour * Math.PI / 6) +
+            (minute * Math.PI / (6 * 60)) +
+            (second * Math.PI / (360 * 60));
+          drawHand(ctx, hour, r * 0.5, r * 0.07);
+
+          minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+          drawHand(ctx, minute, r * 0.8, r * 0.07);
+          second = (second * Math.PI / 30);
+          drawHand(ctx, second, r * 0.9, r * 0.02);
+        }
+
+        function drawHand(ctx, pos, length, width) {
+          ctx.beginPath();
+          ctx.lineWidth = width;
+          ctx.lineCap = "round";
+          ctx.moveTo(0, 0);
+          ctx.rotate(pos);
+          ctx.lineTo(0, -length);
+          ctx.stroke();
+          ctx.rotate(-pos);
+        }
+      </script>
+
+    </div>
+  </div>
+  <br/><br/>
+</body>
+
+</html>
