@@ -284,7 +284,7 @@ color: black;}
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: #4d1111;
+  background-color: #160808;
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -332,7 +332,7 @@ color: black;}
   bottom: 0;
   right: 100%;
   left: 0;
-  background-color: #411e1e;
+  background-color: #160808;
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -378,7 +378,7 @@ color: black;}
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: #411e1e;
+  background-color: #160808;
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -400,11 +400,6 @@ color: black;}
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
-
-
-main{
-  background-color: #0005;
 }
 
 
@@ -430,7 +425,7 @@ main{
   bottom: 0;
   right: 100%;
   left: 0;
-  background-color: #411e1e;
+  background-color: #160808;
   overflow: hidden;
   width: 0;
   height: 100%;
