@@ -27,11 +27,10 @@
 .nav-links{
   flex: 1;
   margin-top: -0.2cm;
- 
 
 }
 .nav-links ul{
-  margin-left: 20px;
+  margin-left: -60px;
   display: inline;
   
   
@@ -268,16 +267,16 @@ color: black;}
 
 .ccontainer1 {
   position: relative;
-  width: 40%;
-  margin-top:-60px;
+  width: 50%;
+  margin-top:-190px;
   margin-bottom:645px;
-  margin-left:634px;
+  margin-left:804px;
 }
 
 .iimage1 {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  height: 70%;
 }
 
 .ooverlay1 {
@@ -293,7 +292,7 @@ color: black;}
 }
 
 .ccontainer1:hover .ooverlay1 {
-  width: 100%;
+  width:70%;
   left: 0;
 }
 
@@ -316,15 +315,16 @@ color: black;}
 .ccontainer2 {
   position: relative;
   width: 40%;
-  margin-top:-300px;
-  margin-bottom:645px;
-  margin-left:34px;
+  height:40%;
+  margin-top:-690px;
+  margin-left:184px;
+  margin-bottom:345px;
 }
 
 .iimage2 {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  height: 70%;
 }
 
 .ooverlay2 {
@@ -332,7 +332,7 @@ color: black;}
   bottom: 0;
   right: 100%;
   left: 0;
-  background-color: #4d1111;
+  background-color: #411e1e;
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -340,8 +340,8 @@ color: black;}
 }
 
 .ccontainer2:hover .ooverlay2 {
-  width: 100%;
-  right: 0;
+  width: 70%;
+  left: 0;
 }
 
 .ttext2 {
@@ -361,16 +361,16 @@ color: black;}
 
 .ccontainer3 {
   position: relative;
-  width: 50%;
-  margin-top:-710px;
-  margin-bottom:645px;
-  margin-left:634px;
+  width: 40%;
+  margin-top:-180px;
+  margin-bottom:-145px;
+  margin-left:804px;
 }
 
 .iimage3 {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 90%;
+  height: 90%;
 }
 
 .ooverlay3 {
@@ -414,15 +414,15 @@ main{
 .ccontainer4 {
   position: relative;
   width: 50%;
-  margin-top:-99px;
+  margin-top:40px;
   margin-bottom:45px;
-  margin-left:34px;
+  margin-left:184px;
 }
 
 .iimage4 {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  height: 70%;
 }
 
 .ooverlay4 {
@@ -433,12 +433,12 @@ main{
   background-color: #411e1e;
   overflow: hidden;
   width: 0;
-  height: 50%;
+  height: 100%;
   transition: .5s ease;
 }
 
 .ccontainer4:hover .ooverlay4 {
-  width: 100%;
+  width: 70%;
   left: 0;
 }
 
@@ -459,4 +459,8 @@ main{
 
 .firstdiv{  
   width:966px;
+}
+
+main{
+  background-color: #160808;
 }
