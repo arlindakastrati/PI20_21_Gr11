@@ -107,6 +107,26 @@ li a {
   }
 }
 </style>
+<?php
+$errfname=$firstname="";
+if($SERVER["REQUEST_METHOD"]=="post"){
+  if(empty($_POST["name"])){
+    $errfname="Name is required";
+  }else{
+    $firstname=test_input($_POST["firstname"]);
+    if(!preg_match("/^[a-zA-Z-' ]*$/",$firstname)){
+      $errfname="Only letters and white space allowed";
+    }
+  }
+}
+
+function test_input($data){
+  $data=trim($data);
+  $data=stripslashes($data);
+  $data=htmlspecialchars($data);
+  return $data;
+}
+?>
     <script> 
   function signupvalidation() { 
       var firstname = document.forms["Sign-up Validation"]["firstname"]; 
@@ -183,13 +203,13 @@ li a {
       </ul>
 
 
-<form name="Sign-up Validation" action="#" onsubmit=" return signupvalidation()" method="post" >
+<form name="Sign-up Validation" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]]);?>" onsubmit=" return signupvalidation()" method="post"z >
   <div class="content" style="color: white;">
     <img class="su" src="su.png" >
     <hr>
     <label> Firstname </label>         
-<input type="text" placeholder="First name" name="firstname" size="15"/> <br> <br> 
-
+<input type="text" placeholder="First name" name="firstname" size="15" value="<?php echo $firstname;?>"/> <br> <br> 
+<?php echo $errfname;?><br>
 <label> Middlename: </label>     
 <input type="text" placeholder="Middle name" name="middlename" size="15"/> <br> <br>  
 <label> Lastname: </label>         
