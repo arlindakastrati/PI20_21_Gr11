@@ -106,11 +106,16 @@ li a {
     transform: translateX(1400px);
   }
 }
+.errors{
+    color:red;
+}
 </style>
 <?php
-$errfname=$firstname="";
-if($SERVER["REQUEST_METHOD"]=="post"){
-  if(empty($_POST["name"])){
+$errfname=$firstname=$errmidname=" ";
+$midname=$errlaname=$laname=$errrepeat=" ";
+$errcourse=$course=$errgender=$gender=$email=$erremail=" ";
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+  if(empty($_POST["firstname"])){
     $errfname="Name is required";
   }else{
     $firstname=test_input($_POST["firstname"]);
@@ -118,6 +123,49 @@ if($SERVER["REQUEST_METHOD"]=="post"){
       $errfname="Only letters and white space allowed";
     }
   }
+
+  if(empty($_POST["firstname"])){
+    $errmidname="Middlename is required";
+  }else{
+    $midname=test_input($_POST["middlename"]);
+    if(!preg_match("/^[a-zA-Z-' ]*$/",$midname)){
+      $errmidname="Only letters and white space allowed";
+    }
+  }
+
+
+  if(empty($_POST["firstname"])){
+    $errlaname="Lastename is required";
+  }else{
+    $laname=test_input($_POST["lastname"]);
+    if(!preg_match("/^[a-zA-Z-' ]*$/",$laname)){
+      $errlaname="Only letters and white space allowed";
+    }
+  }
+
+  //if(empty($_POST["course"])){
+    //  $errcourse="Course is required";
+  //}else{
+    ///  $course=test_input($_POST["course"]);
+  //}
+
+  if(empty($_POST["gender"])){
+    $errgender="Gender is required";
+    }else{
+    $gender=test_input($_POST["gender"]);
+   }
+
+   if(empty($_POST["email"])){
+       $erremail="Email is required";
+   }
+   else{
+    $email=test_input($_POST["email"]);
+    if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+       $erremail="Ivalid email format";
+       }
+   }
+
+
 }
 
 function test_input($data){
@@ -127,72 +175,7 @@ function test_input($data){
   return $data;
 }
 ?>
-    <script> 
-  function signupvalidation() { 
-      var firstname = document.forms["Sign-up Validation"]["firstname"]; 
-      var lastname = document.forms["Sign-up Validation"]["lastname"]; 
-      var middlename = document.forms["Sign-up Validation"]["middlename"]; 
-      var course =  document.forms["Sign-up Validation"]["course"];
-      var email =  document.forms["Sign-up Validation"]["email"]; 
-      var phone =  document.forms["Sign-up Validation"]["phone"]; 
-      var password =   document.forms["Sign-up Validation"]["psw"]; 
-      var passwordr =   document.forms["Sign-up Validation"]["psw-repeat"];
-      var gender =   document.forms["Sign-up Validation"]["gender"];
-      
-     
-
-      if (firstname.value == "") { 
-          alert("Please enter your first name?"); 
-          firstname.focus(); 
-          return false; 
-      } 
-      if (middlename.value == "") { 
-          alert("Please enter your middle name?"); 
-          middlename.focus(); 
-          return false; 
-      } 
-      if (lastname.value == "") { 
-          alert("Please enter your last name?"); 
-          lastname.focus(); 
-          return false; 
-      } 
-    
-      if (phone.value == "") { 
-          alert( "Please enter your phone number?"); 
-          phone.focus(); 
-          return false; 
-      } 
-     
-      if (email.value == "") { 
-          alert( "Please enter your email?"); 
-          email.focus(); 
-          return false; 
-      } 
-
-
-
-      if (password.value == "") { 
-          alert("Please enter your password?"); 
-          password.focus(); 
-          return false; 
-      } 
-      if (passwordr.value == "") { 
-          alert("Please repeat your password?"); 
-          passwordr.focus(); 
-          return false; 
-      } 
-     
-      if((gender[0].checked == false) && ( gender[1].checked == false )) {
-          alert("Please choose your gender?"); 
-          gender.focus(); 
-          return false;
-         }
-        
-      
-
-      return true; 
-  } 
-</script> 
+   
   </head>
 <body>
   
@@ -203,18 +186,37 @@ function test_input($data){
       </ul>
 
 
-<form name="Sign-up Validation" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]]);?>" onsubmit=" return signupvalidation()" method="post"z >
+<form name="Sign-up Validation" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit=" return signupvalidation()" method="post"z >
   <div class="content" style="color: white;">
     <img class="su" src="su.png" >
     <hr>
     <label> Firstname </label>         
 <input type="text" placeholder="First name" name="firstname" size="15" value="<?php echo $firstname;?>"/> <br> <br> 
-<?php echo $errfname;?><br>
+<span class="errors">
+<?php 
+if(isset($errfname))
+echo $errfname;?>
+</span><br>
+
+
 <label> Middlename: </label>     
-<input type="text" placeholder="Middle name" name="middlename" size="15"/> <br> <br>  
+<input type="text" placeholder="Middle name" name="middlename" size="15" value="<?php echo $midname?>"/> <br> <br>  
+<span class="errors">
+<?php
+if(isset($errmidname))
+echo $errmidname;
+?>
+</span>
+
 <label> Lastname: </label>         
-<input type="text" placeholder="Last name" name="lastname" size="15"/> <br> <br>  
-  
+<input type="text" placeholder="Last name" name="lastname" size="15" value="<?php echo $laname?>"/> <br> <br>  
+<span class="errors">
+<?php
+if(isset($errlaname))
+echo $errlaname;
+?>
+</span>
+<br><br>
 <label>   
 Course :  
 </label>   
@@ -227,6 +229,13 @@ Course :
 <option name="course" value="MCA">MCA</option>  
 <option name="course" value="M.Tech">M.Tech</option>  
 </select>  
+<span class="errors">
+<?php 
+if(isset($errcourse))
+echo $errcourse;
+?>
+</span>
+
   
 <br>  
 <br>  
@@ -236,7 +245,12 @@ Gender :
 <input type="radio" name="gender" value="male"/> Male <br>  
 <input type="radio" name="gender" value="female"/> Female <br>  
 <input type="radio" name="gender" value="other"/> Other  
-<br>  
+<br> 
+<span class="errors">
+<?php
+echo $errgender;
+?>
+</span> 
 <br>  
   
 <label>   
@@ -246,7 +260,12 @@ Phone :
 <input style="width: 50%;" type="text" name="phone" size="10"/> <br> <br>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email">
+    <input type="text" placeholder="Enter Email" name="email" value="<?php echo $email?>"/>
+    <span class="errors">
+    <?php
+    echo $erremail;
+    ?>
+    </span>
 
     <form action="/action_page.php" method="get">
       Password: <input type="password" name="Password">
@@ -257,6 +276,8 @@ Phone :
       Repeat password: <input type="password" name="repeat">
        <keygen name="security">
     </form>
+    <span class="errors">
+    </span>
     
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
