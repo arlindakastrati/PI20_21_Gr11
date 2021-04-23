@@ -21,10 +21,7 @@ padding: 0;
 overflow: hidden;
 font-size: 20px;
 
-
-
 }
-
 
 
 li {
@@ -244,12 +241,46 @@ color:  black;
     <li>- The market approach considers the acquisition costs of similar companies in the recent past. This approach may be stymied if the startup idea really is unique.</li>
     <li>- The discounted cash flow approach looks at the company's expected future cash flow. This approach is highly subjective.</li>
     <li>- The development stage approach assigns a higher range of potential value to a startup that is more fully developed. Even if it's not profitable, a startup that has a website and can show some sales and traffic is likely to get a higher valuation than one that merely has an interesting idea.</li>
-
 </ul>
 <br>
-<p>Because startups have a high failure rate, would-be investors consider the management team's experience as well as the idea. Even angel investors don't invest money they cannot afford to lose.</p>
+<h1 style="color:#ff7f27;">Facts:</h1>
+<p><?php
+echo "So start-ups have a high failure rate,so investors consider the management team's experience as well as the idea.
+Because investors don't want to invest money they cannot afford to lose.People who create Start-ups are know as Entrepreneurs,and the always
+try their best to introduce something new in a particular environment to bring diversity.";echo "<br>";echo "<br>";
+echo"Coming up with fresh ideas that solve certain issues in the world is
+what we need right now. Like when you want to win a fight, you shouldn’t be the one receiving the punches and crashing down. You should always find the strength 
+to get up and avoid the punches and sometimes roll with the punches.In order to make the world a better place.";
+echo "<br>";
+echo "<br>";
+$filename = 'Start-up.txt';
+$book_contentii = file_get_contents($filename);
+ 
+$book_content_inlowercase = strtolower($book_contentii);
+ 
+$individ_words = explode(' ', $book_content_inlowercase);
+echo "There are about ".count($individ_words)."  words in a small sample book about Technology and Start-ups: ".substr($filename, 0, -4).".\n";
+echo "<br>";echo "<br>";
+ 
+$word_frequency = array_count_values($individ_words);
+echo "Total number of unique words in the book are ".count($word_frequency).".\n";
+echo "<br>"; 
+echo "The word 'Motivation' occurs ".$word_frequency["motivation"]." times in the book.\n";echo "<br>";
+echo "The word 'Entrepreneurs' occurs ".$word_frequency["entrepreneurs"]." times in the book.\n";echo "<br>";
+ 
+if(isset($word_frequency["creativity"])) {
+    echo "The word 'Creativity' occurs ".$word_frequency["creativity"]." times in the book.\n";
+} else {
+    echo "The word 'Creativity' does not occur even once in the book.\n";echo "<br>";
+}
+echo "<br>"; echo "<br>";
+echo "You can see that Start-ups make people entrepreneurs based in their creativity that has been mixed with motivation. " ?> </p>
+
 </div>
-</div>   
+
+
+</div>  
+
 </body>
 <script>
     $(document).ready(function(){
