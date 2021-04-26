@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="loopfunction.css">
+        <title>Loop and Function in C++</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+       <script type="text/javascript">
+            var now = new Date();
+            var hours = now.getHours();
+            document.bgColor="#CC9900";
+            //8-18 day
+            if (hours > 7 && hours < 15){
+             document.write ('<body style="background-color: rgb(126,164,179);">');
+            }
+            //15-23 night
+            else if (hours > 15 && hours < 23){
+             document.write ('<body style="background-color: rgb(76, 101, 112);">');
+            }
+            else{
+             document.write ('<body style="background-color: rgb(100 146 163);">')
+             ;}
+
+             function myfunction(){
+                 var text="LOOP STATMENTS";
+                 documnet.write("<h2>"+text+"</h2>");
+             }
+            </script>
+          </body>
+</html>   
