@@ -155,7 +155,7 @@
         function quotes() {
         echo "Integrating technology in the math classroom allows students to interact with 
         people outside of the classroom to help broaden their understandings and perspectives
-        about what they are studying.";
+        about topics that they are studying.";
          }
         quotes(); // call the function
         ?></p>
