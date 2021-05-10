@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Sandbox-Technology website</title>
+        <title>Sandbox-Technology Website</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="foto5.png"  >
@@ -72,9 +72,27 @@
     <h1 style="color:aliceblue; text-decoration: none;
           margin-top:99px; margin-right:-522px; text-shadow: none;
           float:right; width:534px; font-size:20px; margin-right:-284px;">
-      Our mision is to help you to learn some programming languages in this page.<br>Exept you can learn here you also
-      can see some events
-      which have to do with technology.
+          <br> 
+      <!-- EXPLODE & IMPLODE funksioni -->
+      <?php
+      $funskioniimplode = array('Our', 'mission', 'is to', 'help', 
+      'you to learn', 'some', 'programming languages', 'in this page. ');
+      $implodegati = implode(' ', $funskioniimplode);
+      echo $implodegati;
+
+      $explodegati = explode(".", "Except. you. can learn. here you also can. see some. events
+                             which have to do with. technology!");
+      print_r($explodegati[0]);
+      print_r($explodegati[1]);
+      print_r($explodegati[2]);
+      print_r($explodegati[3]);
+      print_r($explodegati[4]);
+      print_r($explodegati[5]);
+      print_r($explodegati[6]);
+      echo "<br/>";
+     ?>
+       
+       
     </h1>
     <div class="ccontainer4">
       <img src="om2.jpg" href="learnhtml.html" class="iimage4">
@@ -88,9 +106,16 @@
     <p>
     <h1 style="color:#ff7f27; text-shadow: none; margin-left:315px; margin-top:114px;">C++ language</h1>
     <h1 style="color:aliceblue; text-decoration: none;
-      margin-top:56px; text-shadow: none; margin-left:185px; width:534px; font-size:20px; ">C++ is a cross-platform language
-      that can be used to create high-performance applications.
-      C++ gives programmers a high level of control over system resources and memory.</h1>
+      margin-top:56px; text-shadow: none; margin-left:185px; width:534px; font-size:20px; ">
+      <!-- TRIM_funksioni -->
+      <?php
+      $trimfunksioni = "                   C++ is              a cross-platform language
+      that can be used to create high-performance       applications.
+      C++ gives       programmers a high level of          control    over system                 resources       and memory.        ";
+      echo  trim($trimfunksioni);
+      echo "<br/>";
+      ?>
+      </h1>
     <div class="ccontainer1">
       <img src="c++image1.jpg" href="cpp.html" class="iimage1">
       <div class="ooverlay1">
