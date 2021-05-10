@@ -72,7 +72,16 @@ h1>li::after {
         <p style="margin-left: 500px; font-size: 20px;width:400px;">Let’s create new senses for ourselves! Leverage Neosensory’s Buzz haptic wristband and Edge Impulse’s machine learning platform to......</p>
       </div>
        <br>
-        <h2 style="color:#fa893e; font-size: 30px; margin-left: 950px;">New competitions are coming soon!</h2>
-        
+  <!--building function fopen() -->
+  <h2 style="color:#fa893e; font-size: 30px; margin-left: 950px;"><?php
+    $file = fopen("Doc1.txt","r");
+    //Output lines until EOF is reached
+    while(! feof($file)) {
+      $line = fgets($file);
+      echo $line. "<br>";
+    }
+    
+    fclose($file);
+    ?></h2>        
     </body>
 </html>

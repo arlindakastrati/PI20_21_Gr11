@@ -123,7 +123,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       $errfname="Only letters and white space allowed";
     }
   }
-
   if(empty($_POST["firstname"])){
     $errmidname="Middlename is required";
   }else{
@@ -197,7 +196,7 @@ function test_input($data){
 if(isset($errfname))
 echo $errfname;?>
 </span><br>
-
+<br><br>
 
 <label> Middlename: </label>     
 <input type="text" placeholder="Middle name" name="middlename" size="15" value="<?php echo $midname?>"/> <br> <br>  
@@ -205,9 +204,8 @@ echo $errfname;?>
 <?php
 if(isset($errmidname))
 echo $errmidname;
-?>
+?><br>
 </span>
-
 <label> Lastname: </label>         
 <input type="text" placeholder="Last name" name="lastname" size="15" value="<?php echo $laname?>"/> <br> <br>  
 <span class="errors">
@@ -215,8 +213,8 @@ echo $errmidname;
 if(isset($errlaname))
 echo $errlaname;
 ?>
-</span>
 <br><br>
+</span>
 <label>   
 Course :  
 </label>   
@@ -234,11 +232,8 @@ Course :
 if(isset($errcourse))
 echo $errcourse;
 ?>
+<br><br>
 </span>
-
-  
-<br>  
-<br>  
 <label>   
 Gender :  
 </label><br>  
@@ -250,9 +245,8 @@ Gender :
 <?php
 echo $errgender;
 ?>
+<br><br>
 </span> 
-<br>  
-  
 <label>   
 Phone :  
 </label><br>
@@ -265,6 +259,7 @@ Phone :
     <?php
     echo $erremail;
     ?>
+    <br><br>
     </span>
 
     <form action="/action_page.php" method="get">
@@ -286,8 +281,19 @@ Phone :
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" class="signupbtn">Sign Up</button>/
     </div>
+    <?php
+echo "<h2>Your Input:</h2>";
+echo $firstname;
+echo "<br>";
+echo $laname;
+echo "<br>";
+echo $email;
+echo "<br>";
+
+?>
+
   </div>
 </form>
 
