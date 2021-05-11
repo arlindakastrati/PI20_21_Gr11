@@ -187,7 +187,14 @@
       </div>
 
     <article class="all-browsers" >
-        <h1 style="color:#ff7f27;">Ended events</h1>
+        <h1 style="color:#ff7f27;">
+        <!-- SUBSTR function --> 
+        <?php 
+        //Ended events 
+        $text = "Some Ended events";
+        echo substr($text, 5);
+        ?> 
+        </h1>
         <article class="browser"  >
             <a  href="https://www.eventbrite.co.uk/e/pacing-how-to-write-an-addictive-page-turner-registration-133203530345?aff=ebdssbonlinebrowse"
                 target="_blank">

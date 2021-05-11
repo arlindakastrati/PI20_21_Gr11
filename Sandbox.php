@@ -133,8 +133,11 @@
     <h2 style="color:aliceblue; text-decoration: none;
     margin-top:-599px; margin-right:192px; text-shadow: none;
     float:right; width:534px; font-size:20px;">
-      HTML is one of the essential languages in the web that allows us to build the structure of our website.
-      It is not a programming language, rather its what its called a “markup language”.
+    <!-- STR_REPLACE --> 
+      <?php
+      echo str_replace("CSS", "HTML", "CSS is one of the essential languages in the web that allows us to build the structure of our website. " );
+      echo str_replace("assembly", "markup", "It is not a programming language, rather its what its called a ”assembly language”." );
+      ?>
     </h2>
 
     <div class="ccontainer2">

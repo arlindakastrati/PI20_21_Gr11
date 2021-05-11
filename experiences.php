@@ -197,7 +197,12 @@
                 That was the reason that made me search on the internet for trainings or conferences for advanced math
                 field application.
                 I found <a href="https://www.eventbrite.com/d/online/events/" style="color: white;"
-                    target="_blank">EVENTBRITE</a> website for online trainings and conferences. After many trainings
+                    target="_blank">EVENTBRITE</a> 
+                        <!-- strlen function --> 
+                        (<?php 
+                        echo strlen("EVENTBRITE"); 
+                        ?>)
+                        website for online trainings and conferences. After many trainings
                 done and many conferences listened, my improvement grade is growing up.
                 My next event like a member is the National Math Festival. You can see more information clicking the
                 button below.
