@@ -81,15 +81,15 @@ h1>li::after {
           </ul>
       </div>
       <div class="profile">
-        <img src="#" class="profile-img">
+        <img src="albiona.jpg" class="profile-img">
 
         <h3 class="user-name">Albiona</h3>
         <h5>Member</h5>
         <p>A student of Computer Engineering. Aspiring to be a S-Media Manager.</p>
         <ul>
-          <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/albiona.kukaj" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.snapchat.com/albionakukaj" target="_blank"><i class="fa fa-snapchat" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/_albionakukaj/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           </ul>
       </div>
       
