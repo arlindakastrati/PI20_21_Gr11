@@ -23,10 +23,10 @@
 body {
   font-family: sans-serif;
   
-  background-image: url('night.jpg');
+  background-image: url('foto.jpg');
 }
 
-* {
+*{
   box-sizing: border-box;
   
 }
@@ -52,25 +52,10 @@ li a {
   font-size: 25px;
   display: block;
   
-  color:#ff7f27;
+  color:black;
   text-align: center;
   padding: 14px 30px;
   text-decoration: none;
-
-
-}
-li a:hover::after {
-  width: 100%;
-}
-li a::after {
-  content: '';
-  background:#ff7f27;;
-  height: 2px;
-  width: 0;
-  display: block;
-  margin-top: 2px !important;
-  transition: width 1s;
-  margin: 0 auto;
 }
 input[type=text], select, textarea {
   width: 100%;
@@ -83,53 +68,31 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #ff7f27;;
+  background-color: #ff7f27;
   color: white;
   padding: 12px 40px;
   border: none;
+  float:left;
   cursor: pointer;
   border-radius: 30px;
   
 }
 p{
   background-color: #ff7f27;
-  color: white;
-  padding: 12px 20px;
+  width:100%;
+  color: black;
+  padding: 12px 10px;
   border: none;
   cursor: pointer;
  border-radius: 30px;
   text-align: center;
 }
-
-
 input[type=submit]:hover {
   background-color:black ;
   opacity: 0.8;
+
 }
 
-.contact {
-  background-color:rgb(197, 186, 186);
-  padding: 10px;
-  
-}
-
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 10px;
-  color: white;
-  margin-left: 5px;
-}
-.row {
-  margin-top: 50px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 @media screen and (max-width: 600px) {
   .column, input[type=submit] {
@@ -144,10 +107,9 @@ input[type=submit]:hover {
 #myCanvas {
 margin-left: 380px;
 border-radius: 60px;
+float:right;
 }
-#back {
-  display: list-item;
-}
+
 #show{
   margin-top: -50px;
   margin-left: 1200px;
@@ -157,22 +119,29 @@ border-radius: 60px;
   }
   #result{
     margin-right: 20px;
-text-align: right;
-    color: white;
+    text-align: right;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
   }
   
+
+.contact {
+  background-color:rgb(197, 186, 186);
+  padding: 10px;
+  
+}
+h2{
+  color:black;
+}
+  
   h1 li {
   font-size: 30px;
   display: block;
-  
-  color:white;
+  color:black;
   text-align: center;
   padding: 14px 30px;
   text-decoration: none;
-
-
 }
 h1>li:hover::after {
   width: 200px;
@@ -187,6 +156,7 @@ h1>li::after {
   transition: width 1s;
   margin: 0 auto;
 }
+.error{color: #FF0000;}
 </style>
 
 </head>
@@ -199,16 +169,16 @@ h1>li::after {
 
   </ul>
 </div>
-<h1 style="font-size: 39px; color: white; text-align: center;margin-top: -55px;font-family: sans-serif;list-style: none;"><li>CONTACT US</li></h1>
+<h1 style="font-size: 39px; color: black; text-align: center;margin-top: -55px;font-family: sans-serif;list-style: none;"><li>CONTACT US</li></h1>
 
 
-<div  class="Contact " style="margin-left:2px;margin-right:20px;width:100%; color: rgb(0, 0, 0);">
+<div  class="Contact " style="margin-left:2px;margin-right:20px;width:100%; color: white;">
   <div style="text-align:center">
   </div>
   <div class="row" >
     <iframe style="margin-left: 110px; margin-top: 100px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.592851308751!2d21.16496201489919!3d42.64879067916858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec1b6ecb2c1%3A0x7f0893730efce187!2sFakulteti%20Teknik!5e0!3m2!1sen!2s!4v1608551724719!5m2!1sen!2s"
-     width="600"
-     height="450"
+     width="800"
+     height="500"
      frameborder="0"
      tyle="border:0;" 
      allowfullscreen=""
@@ -216,32 +186,8 @@ h1>li::after {
      tabindex="0">
      
     </iframe> 
-
-    <div style="
-    background-color: rgba(211, 211, 211, 0.2);" class="column"  style="float: left;" style="width: 250px; margin-top: -15px; margin-bottom:-10px;"  >
-      <form action="">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Continent</label>
-        <select id="country" name="country">
-          <option value="europe">Europe</option>
-          <option value="usa">USA</option>
-          <option value="canada">Canada</option>
-          <option value="australia">Australia</option>
-          <option value="asia">Asia</option>
-        </select>
-        <label for="subject">Message</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <p><a style="color: white;" href="mailto:someone@example.com">Send email</a></p>
-        <div id="cv"><input type="submit" value="Submit">
-       <div id="back"><a href="Sandbox.html"> <canvas id="myCanvas" width="130" height="20" style="border:1px solid;" ></canvas></a></button>
-      <p1 style="margin-left: 420px;">Go back</p1>
-      </div></div>
-      </form>
-    </div>
-      <script>
+    
+    <script>
         $(document).ready(function(){
           $("form").submit(function(){
             alert("Submitted");
@@ -251,9 +197,9 @@ h1>li::after {
 </div>
 <div id="result">
   
+
 </div>
 <button id="show" type="button" onclick="showPosition();">Show Position</button>
-
 </div>
 
 <script>
@@ -272,6 +218,90 @@ ctx.fillStyle = grd;
 ctx.fillRect(0, 0, 150, 80);
 
 </script>
+
+    <?php
+
+$NameErr = $LastNameErr = $genderErr = $commentErr = $emailErr = "";
+$Name = $LastName = $gender = $comment = $email = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["Name"])) {
+    $NameErr = "Name is required";
+  } else {
+    $Name = test_input($_POST["Name"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$Name)) {
+      $NameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["LastName"])) {
+    $LastNameErr = "LastName is required";
+  } else {
+    $LastName = test_input($_POST["LastName"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$LastName)) {
+      $LastNameErr = "Only letters and white space allowed";
+    }
+  }
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+ 
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+<h2>Leave a message?</h2>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<div class="content" style="color: black;">
+  First Name: <input type="text" name="Name"  placeholder="Your name.." >
+  <span class="error">* <?php echo $NameErr;?></span>
+  <br><br>
+ Last Name: <input type="text" name="LastName" placeholder="Your last name..">
+  <span class="error">* <?php echo $LastNameErr;?></span>
+  <br><br>
+  E-mail: <input type="text" name="email">
+  <span class="error">* <?php echo $emailErr;?></span>
+  <br><br>
+  <label for="subject">Message:</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+  <br><br>
+        Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+
+      <input type="submit" name="submit" value="Submit">  
+      </div></div>
+      </form>
+
+<br></br>
+<br></br>
+
+<?php
+echo "<br/>";
+
+$datat = "Prishtine,2020";
+$data_copy = preg_replace("([0-9]+)","2021",$datat,);
+echo $data_copy;
+?>
 
 </body>
 </html>
