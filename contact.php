@@ -18,6 +18,9 @@
       }
   }
 </script>
+<?php
+include("backgroundcolor.html")
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
 body {
@@ -163,9 +166,9 @@ h1>li::after {
 <body>
 <div >
   <ul>
-    <li style="float: left;"><a href="Sandbox.html"><i class="fa fa-chevron-left"></i></a></li>
+    <li style="float: left;"><a href="Sandbox.php"><i class="fa fa-chevron-left"></i></a></li>
         <li style="float: right;"><a href="signin.html">Sign in</a></li>
-    <li style="float: right;"><a href="signup.html">Sign up</a></li>
+    <li style="float: right;"><a href="signup.php">Sign up</a></li>
 
   </ul>
 </div>

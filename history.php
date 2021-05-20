@@ -180,8 +180,8 @@
               <a href="upcoming.html">UPCOMING</a>
             </div>
           </div>
-          <li id="wht" style="margin-left: 45px;"><a href="experiences.html">EXPERIENCES</a></li>
-          <li id="wht"><a href="history.html">HISTORY</a></li>
+          <li id="wht" style="margin-left: 45px;"><a href="experiences.php">EXPERIENCES</a></li>
+          <li id="wht"><a href="history.php">HISTORY</a></li>
         </ul>
     
       </div>
