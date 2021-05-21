@@ -1,3 +1,5 @@
+<?php
+include 'connect.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,7 @@ $cookie_value = "Contact";
 setcookie($cookie_name, $cookie_value, time() + 3600, "/");
 setcookie($cookie_name, $cookie_value, time() - 3600, "/");
 ?>
-
+	
 <?php
 if(!isset($_COOKIE[$cookie_name])) {
      echo "Cookie named '" . $cookie_name . "' is not set!";
@@ -61,24 +63,38 @@ include("backgroundcolor.html")
 <style>
 body {
   font-family: sans-serif;
-  
-  background-image: url('foto.jpg');
+  background-image: url('night.jpg');
 }
 
 *{
   box-sizing: border-box;
   
 }
-@font-face{
-  font-family: 'CrimsonText';
-  src: url(fonts/CrimsonText-SemiBold.ttf);
-  font-style: normal;
-  font-weight: 100;
-}
 h1 {
   font-family: sans-serif;
   font-weight: 100;
+  font-size:35px;
 }
+h1 li {
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+h1>li:hover::after {
+  width: 280px;
+}
+h1>li::after {
+  content: '';
+  background:#ff7f27;;
+  height: 2px;
+  width: 0;
+  display: block;
+  margin-top: 2px !important;
+  transition: width 1s;
+  margin: 0 auto;
+}	
 
 ul {
   list-style-type: none;
@@ -86,15 +102,28 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: none;
+  margin-top:20px;
 }
 li a {
   font-size: 25px;
-  display: block;
-  
+  display: block;  
   color:black;
   text-align: center;
   padding: 14px 30px;
   text-decoration: none;
+}
+li a:hover::after {
+  width: 100%;
+}
+li a::after {
+  content: '';
+  background:#ff7f27;
+  height: 2px;
+  width: 0;
+  display: block;
+  margin-top: 2px !important;
+  transition: width 1s;
+  margin: 0 auto;
 }
 input[type=text], select, textarea {
   width: 100%;
@@ -173,29 +202,7 @@ float:right;
 h2{
   color:black;
 }
-  
-  h1 li {
-  font-size: 30px;
-  display: block;
-  color:black;
-  text-align: center;
-  padding: 14px 30px;
-  text-decoration: none;
-}
-h1>li:hover::after {
-  width: 200px;
-}
-h1>li::after {
-  content: '';
-  background:#ff7f27;;
-  height: 2px;
-  width: 0;
-  display: block;
-  margin-top: 2px !important;
-  transition: width 1s;
-  margin: 0 auto;
-}
-.error{color: #FF0000;}
+
 </style>
 
 </head>
@@ -208,7 +215,7 @@ h1>li::after {
 
   </ul>
 </div>
-<h1 style="font-size: 39px; color: black; text-align: center;margin-top: -55px;font-family: sans-serif;list-style: none;"><li>CONTACT US</li></h1>
+<h1 style=" color: black; text-align: center;margin-top: -50px;font-family: sans-serif;list-style: none;"><li>CONTACT US</li></h1>
 
 
 <div  class="Contact " style="margin-left:2px;margin-right:20px;width:100%; color: white;">
@@ -257,12 +264,43 @@ ctx.fillStyle = grd;
 ctx.fillRect(0, 0, 150, 80);
 
 </script>
+<script>
+//Ajax
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethint.php?q=" + str, true);
+    xmlhttp.send();
+  }}
+  function showHinti(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethinti.php?q=" + str, true);
+    xmlhttp.send();
+  }}
 
-    <?php
+</script>
+ <?php
 
-$NameErr = $LastNameErr = $genderErr = $commentErr = $emailErr = "";
-$Name = $LastName = $gender = $comment = $email = "";
-
+$NameErr = $LastNameErr  = $commentErr = $emailErr = "";
+$Name = $LastName =  $comment = $email = "";
+$status = true;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["Name"])) {
     $NameErr = "Name is required";
@@ -270,6 +308,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Name = test_input($_POST["Name"]);
     if (!preg_match("/^[a-zA-Z-' ]*$/",$Name)) {
       $NameErr = "Only letters and white space allowed";
+      $status = false;
     }
   }
   
@@ -279,6 +318,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $LastName = test_input($_POST["LastName"]);
     if (!preg_match("/^[a-zA-Z-' ]*$/",$LastName)) {
       $LastNameErr = "Only letters and white space allowed";
+      $status = false;
     }
   }
   if (empty($_POST["email"])) {
@@ -286,22 +326,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $email = test_input($_POST["email"]);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $status = false;
       $emailErr = "Invalid email format";
     }
   }
  
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
-  } else {
-    $gender = test_input($_POST["gender"]);
-  }
-}
-
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
+}
+if($status){
+    try{
+  $test = "insert into contact(FirstName,LastName,Email,Message) Values(:firstname, :lastname, :email,:message)";
+  $query = $con -> prepare($test);
+  $query -> execute([
+  ":firstname" => $firstname,
+  ":lastname" => $lastname,
+  ":email" => $email,
+  ":message" => $message
+  ]); 
+
+  echo '<h4 style="text-align:center;color:white;">Records updated successfully!</h4>';}
+  catch(PDOException $e){
+    die('Error' . $e->getMessage());
+    }
+    catch (Exception $e) {
+    die('General Error: '.$e->getMessage());
+    }
+  try {
+      require 'sendmail.php';
+      $Contact = new SendEmail($email);
+      if($Contact->sendContact($firstname)){
+        unset($Contact);
+        echo '<h4 style="text-align:center;color:white;">The email has been sent.!</h4>';
+    }else{
+      echo '<h4 style="text-align:center;color:white;">The email failed! You can try again latter or send us an email at:<strong> sandboxentertainmentt@gmail.com</strong></h4>';
+    }}
+  catch (Exception $e) {
+      echo $e->getMessage();
+  }
+}
 }
 ?>
 <h2>Leave a message?Let's get in touch</h2>
@@ -325,12 +391,6 @@ echo preg_replace($pattern, 'fields', $str);
   <br><br>
   <label for="subject">Message:</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
-  <br><br>
-        Gender:
-  <input type="radio" name="gender" value="female">Female
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="other">Other
-  <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
 
       <input type="submit" name="submit" value="Submit">  
