@@ -52,24 +52,23 @@ if(!isset($_COOKIE[$cookie_name])) {
               document.getElementById("result").innerHTML = positionInfo;
           });
       } else {
-          alert("Sorry, your browser does not support HTML5 geolocation."); // alert
+          alert("Sorry, your browser does not support HTML5 geolocation.");
       }
   }
 </script>
-<?php
-include("backgroundcolor.html")
-?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
 body {
   font-family: sans-serif;
+  
   background-image: url('night.jpg');
 }
 
-*{
+* {
   box-sizing: border-box;
   
 }
+
 h1 {
   font-family: sans-serif;
   font-weight: 100;
@@ -94,7 +93,7 @@ h1>li::after {
   margin-top: 2px !important;
   transition: width 1s;
   margin: 0 auto;
-}	
+}
 
 ul {
   list-style-type: none;
@@ -105,12 +104,14 @@ ul {
   margin-top:20px;
 }
 li a {
-  font-size: 25px;
-  display: block;  
-  color:black;
+  font-size: 20px;
+  display: block;
+  color: white;
   text-align: center;
   padding: 14px 30px;
   text-decoration: none;
+
+
 }
 li a:hover::after {
   width: 100%;
@@ -140,27 +141,49 @@ input[type=submit] {
   color: white;
   padding: 12px 40px;
   border: none;
-  float:left;
   cursor: pointer;
   border-radius: 30px;
   
 }
 p{
-  background-color: #ff7f27;
-  width:100%;
-  color: black;
-  padding: 12px 10px;
+  background-color:  #ff7f27;
+  color: white;
+  padding: 12px 20px;
   border: none;
   cursor: pointer;
  border-radius: 30px;
   text-align: center;
 }
-input[type=submit]:hover {
-  background-color:black ;
-  opacity: 0.8;
 
+
+input[type=submit]:hover {
+  background-color: black;
+  opacity: 0.8;
 }
 
+.contact {
+  background-color:rgb(197, 186, 186);
+  padding: 10px;
+  
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 10px;
+  color: white;
+  margin-left: 5px;
+}
+.row {
+  margin-top: 50px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 @media screen and (max-width: 600px) {
   .column, input[type=submit] {
@@ -175,33 +198,25 @@ input[type=submit]:hover {
 #myCanvas {
 margin-left: 380px;
 border-radius: 60px;
-float:right;
 }
-
+#back {
+  display: list-item;
+}
 #show{
   margin-top: -50px;
-  margin-left: 1200px;
+  margin-left: 1170px;
   padding: 10px 40px;
   color: rgb(9, 47, 83);
   background-color: lightcyan;
   }
-  #result{
+#result{
     margin-right: 20px;
     text-align: right;
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-  }
-  
+}
 
-.contact {
-  background-color:rgb(197, 186, 186);
-  padding: 10px;
-  
-}
-h2{
-  color:black;
-}
 
 </style>
 
@@ -210,21 +225,20 @@ h2{
 <div >
   <ul>
     <li style="float: left;"><a href="Sandbox.php"><i class="fa fa-chevron-left"></i></a></li>
-        <li style="float: right;"><a href="signin.html">Sign in</a></li>
-    <li style="float: right;"><a href="signup.php">Sign up</a></li>
+        <li style="float: right;"><a href="signin.html">SIGN IN</a></li>
+    <li style="float: right;"><a href="signup.php">SIGN UP</a></li>
 
   </ul>
 </div>
-<h1 style=" color: black; text-align: center;margin-top: -50px;font-family: sans-serif;list-style: none;"><li>CONTACT US</li></h1>
+<h1 style="color: white; text-align: center;margin-top:-50px;"><li>CONTACT US</li></h1>
 
-
-<div  class="Contact " style="margin-left:2px;margin-right:20px;width:100%; color: white;">
+<div  class="Contact " style="margin-left:2px;margin-right:20px;width:100%; color: rgb(0, 0, 0);">
   <div style="text-align:center">
   </div>
   <div class="row" >
-    <iframe style="margin-left: 110px; margin-top: 100px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.592851308751!2d21.16496201489919!3d42.64879067916858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec1b6ecb2c1%3A0x7f0893730efce187!2sFakulteti%20Teknik!5e0!3m2!1sen!2s!4v1608551724719!5m2!1sen!2s"
-     width="800"
-     height="500"
+    <iframe style="margin-left: 90px; margin-top: 30px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.592851308751!2d21.16496201489919!3d42.64879067916858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec1b6ecb2c1%3A0x7f0893730efce187!2sFakulteti%20Teknik!5e0!3m2!1sen!2s!4v1608551724719!5m2!1sen!2s"
+     width="650"
+     height="470"
      frameborder="0"
      tyle="border:0;" 
      allowfullscreen=""
@@ -233,7 +247,31 @@ h2{
      
     </iframe> 
     
-    <script>
+    <div style="
+    background-color: rgba(211, 211, 211, 0.2);" class="column"  style="float: left;" style="width: 250px; margin-top: -15px; margin-bottom:-10px;"  >
+      <form method="post" action="">
+        <label for="Name">First Name</label>
+        <input type="text"  name="FirstName" placeholder="Your name.." required onkeyup="showHint(this.value)"  >
+
+        <label for="LastName">Last Name</label>
+        <input type="text" name="LastName" placeholder="Your last name.." required onkeyup="showHinti(this.value)">
+        
+
+        <label for="email">Email</label>
+        <input type="text"  name="Email"required >
+        
+        <label for="subject">Message</label>
+        <textarea id="subject" name="Message" placeholder="Write something.." style="height:170px"required></textarea>
+        
+        <div id="cv"><input type="submit" name="submit" value="Submit">
+       <div id="back"><a href="Sandbox.php"> <canvas id="myCanvas" width="130" height="20" style="border:1px solid;" ></canvas></a></button>
+      <p1 style="margin-left: 420px;">Go back</p1>
+      </div></div>
+      </form>
+      <p style="border-radius: 0%;">Suggestions: <span id="txtHint"></span></p>
+    </div>
+    
+      <script>
         $(document).ready(function(){
           $("form").submit(function(){
             alert("Submitted");
@@ -243,9 +281,9 @@ h2{
 </div>
 <div id="result">
   
-
 </div>
 <button id="show" type="button" onclick="showPosition();">Show Position</button>
+
 </div>
 
 <script>
@@ -253,17 +291,16 @@ h2{
   var ctx = c.getContext("2d");
   ctx.font = "15px Arial";
   ctx.fillText("Go back", 40, 15);
-  </script>
+</script>
 <script>
 var c = document.getElementById("myCanvas");
 var grd = ctx.createLinearGradient(0, 0, 200, 0);
 grd.addColorStop(0, "green");
 grd.addColorStop(1, "white");
-
 ctx.fillStyle = grd;
 ctx.fillRect(0, 0, 150, 80);
-
 </script>
+
 <script>
 //Ajax
 function showHint(str) {
@@ -296,48 +333,42 @@ function showHint(str) {
   }}
 
 </script>
- <?php
+<?php
+$firstname = "";
+$lastname = "";
+$email = "";
+$message ="";
+$errors=array();
 
-$NameErr = $LastNameErr  = $commentErr = $emailErr = "";
-$Name = $LastName =  $comment = $email = "";
-$status = true;
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["Name"])) {
-    $NameErr = "Name is required";
-  } else {
-    $Name = test_input($_POST["Name"]);
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$Name)) {
-      $NameErr = "Only letters and white space allowed";
-      $status = false;
-    }
+if(isset($_POST["submit"])){
+  $firstname = $_POST['FirstName'];
+  $lastname = $_POST['LastName'];
+  $email = $_POST['Email'];
+  $message = $_POST['Message'];
+  $status = true;
+  setcookie("user",$_POST['FirstName'],time()+3600);
+    //user-eshte variabel e cookies(name) qe tragon se cookie do te fshihet pas nje ore(koha+3600 sekonda)
+    //mundemi me perdor kohen sa dojme na,per nje muaj pershembull
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
+    $status = false;
+    echo "<h4 style='text-align:center;color:white;'>Please use only letters and spaces.</h4>";
   }
-  
-  if (empty($_POST["LastName"])) {
-    $LastNameErr = "LastName is required";
-  } else {
-    $LastName = test_input($_POST["LastName"]);
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$LastName)) {
-      $LastNameErr = "Only letters and white space allowed";
-      $status = false;
-    }
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
+    $status = false;
+    echo "<h4 style='text-align:center'>Please use only letters and spaces.</h4>";
   }
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $status = false;
-      $emailErr = "Invalid email format";
-    }
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $status = false;
+    echo "<h4 style='text-align:center;color:white;'>Your format of your email is not right.</h4>";
   }
- 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-if($status){
+  if(!preg_match("/^[a-zA-Z-' ]*$/",$firstname)|| !filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "<h4 style='text-align:center;color:white;'>Try again.</h4>";
+  }
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$message)) {
+    $status = false;
+    echo "<h4 style='text-align:center;color:white;'>Please use only letters and spaces.</h4>";
+  }
+  if($status){
     try{
   $test = "insert into contact(FirstName,LastName,Email,Message) Values(:firstname, :lastname, :email,:message)";
   $query = $con -> prepare($test);
@@ -368,40 +399,7 @@ if($status){
       echo $e->getMessage();
   }
 }
-}
-?>
-<h2>Leave a message?Let's get in touch</h2>
-<?php
-$str = 'Click to fill out the blank parts';
-$pattern = '/parts/i';
-echo preg_replace($pattern, 'fields', $str);
-?>
-<br></br>
-<div style="
-    background-color: rgba(211, 211, 211, 0.2);" class="column"  style="float: left;" style="width: 250px; margin-top: -15px; margin-bottom:-10px;"  >
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-<div class="content" style="color: black;">
-  First Name: <input type="text" name="Name"  placeholder="Your name.." onkeyup="showHint(this.value)" >
-  <span class="error">* <?php echo $NameErr;?></span>
-  <br><br>
- Last Name: <input type="text" name="LastName" placeholder="Your last name.." onkeyup="showHinti(this.value)">
-  <span class="error">* <?php echo $LastNameErr;?></span>
-  <br><br>
-  E-mail: <input type="text" name="email">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-  <label for="subject">Message:</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
-  <br><br>
-
-      <input type="submit" name="submit" value="Submit">  
-      </div></div>
-      </form>
-<p style="border-radius: 0%;">Suggestions: <span id="txtHint"></span></p>
-
-<br></br>
-<br></br>
-
+}?>
 <?php
 echo "<br/>";
 
