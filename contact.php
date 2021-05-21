@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+$cookie_name = "user";
+$cookie_value = "Contact";
+setcookie($cookie_name, $cookie_value, time() + 3600, "/");
+setcookie($cookie_name, $cookie_value, time() - 3600, "/");
+?>
+
+<?php
+if(!isset($_COOKIE[$cookie_name])) {
+     echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+     echo "Cookie '" . $cookie_name . "' is set!<br>";
+     
+}
+?>
+<?php
+   session_start();
+   
+   if( isset( $_SESSION['counter'] ) ) {
+      $_SESSION['counter'] += 1;
+   }else {
+      $_SESSION['counter'] = 1;
+   }
+	
+   $msg = "You have visited this page ".  $_SESSION['counter'];
+   $msg .= " in this session.";
+?>
+   
+   <body>
+      <?php  echo ( $msg ); ?>
+   </body>
+
+   <?php
+   session_destroy();
+?>
+<br></br>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 <title>Contact</title>
@@ -268,7 +304,13 @@ function test_input($data) {
   return $data;
 }
 ?>
-<h2>Leave a message?</h2>
+<h2>Leave a message?Let's get in touch</h2>
+<?php
+$str = 'Click to fill out the blank parts';
+$pattern = '/parts/i';
+echo preg_replace($pattern, 'fields', $str);
+?>
+<br></br>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 <div class="content" style="color: black;">
@@ -308,3 +350,5 @@ echo $data_copy;
 
 </body>
 </html>
+
+
