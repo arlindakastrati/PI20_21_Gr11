@@ -1,8 +1,11 @@
+<?php include('conect.php');?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <style>
 body {font-family: Arial, Helvetica, sans-serif;
 background-image: url("night.jpg");}
@@ -110,169 +113,47 @@ li a {
     color:red;
 }
 </style>
-<?php
-$errfname=$firstname=$errmidname=" ";
-$midname=$errlaname=$laname=$errrepeat=" ";
-$errcourse=$course=$errgender=$gender=$email=$erremail=" ";
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-  if(empty($_POST["firstname"])){
-    $errfname="Name is required";
-  }else{
-    $firstname=test_input($_POST["firstname"]);
-    if(!preg_match("/^[a-zA-Z-' ]*$/",$firstname)){
-      $errfname="Only letters and white space allowed";
-    }
-  }
-  if(empty($_POST["firstname"])){
-    $errmidname="Middlename is required";
-  }else{
-    $midname=test_input($_POST["middlename"]);
-    if(!preg_match("/^[a-zA-Z-' ]*$/",$midname)){
-      $errmidname="Only letters and white space allowed";
-    }
-  }
-
-
-  if(empty($_POST["firstname"])){
-    $errlaname="Lastename is required";
-  }else{
-    $laname=test_input($_POST["lastname"]);
-    if(!preg_match("/^[a-zA-Z-' ]*$/",$laname)){
-      $errlaname="Only letters and white space allowed";
-    }
-  }
-
-  //if(empty($_POST["course"])){
-    //  $errcourse="Course is required";
-  //}else{
-    ///  $course=test_input($_POST["course"]);
-  //}
-
-  if(empty($_POST["gender"])){
-    $errgender="Gender is required";
-    }else{
-    $gender=test_input($_POST["gender"]);
-   }
-
-   if(empty($_POST["email"])){
-       $erremail="Email is required";
-   }
-   else{
-    $email=test_input($_POST["email"]);
-    if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-       $erremail="Ivalid email format";
-       }
-   }
-
-
-}
-
-function test_input($data){
-  $data=trim($data);
-  $data=stripslashes($data);
-  $data=htmlspecialchars($data);
-  return $data;
-}
-?>
    
   </head>
 <body>
   
 
   <div class="included">
-    <ul>
-      <li style="float: left;"><a href="contact.html"><i class="fa fa-chevron-left"></i></a></li>
-      </ul>
+    <ul style="font-size:25px;">
+      <li style="float: left;"><a href="contact.php"><i class="fa fa-chevron-left"></i></a></li>
+    </ul>
 
 
-<form name="Sign-up Validation" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit=" return signupvalidation()" method="post"z >
+<form name="Sign-up Validation" action="signup.php" method="post" >
+  <?php include('errors.php');?>
   <div class="content" style="color: white;">
-    <img class="su" src="su.png" >
+    <img class="su" src="su.png" style="radius:30%;margin-left:50px;margin-top:-27px;background:transparent;color:yellow;" >
     <hr>
     <label> Firstname </label>         
-<input type="text" placeholder="First name" name="firstname" size="15" value="<?php echo $firstname;?>"/> <br> <br> 
-<span class="errors">
-<?php 
-if(isset($errfname))
-echo $errfname;?>
-</span><br>
-<br><br>
+<input type="text" placeholder="First name" name="firstname" size="15" value="<?php echo $firstname; ?> "/> <br>  
 
-<label> Middlename: </label>     
-<input type="text" placeholder="Middle name" name="middlename" size="15" value="<?php echo $midname?>"/> <br> <br>  
-<span class="errors">
-<?php
-if(isset($errmidname))
-echo $errmidname;
-?><br>
-</span>
+</span><br>
+<br>
 <label> Lastname: </label>         
-<input type="text" placeholder="Last name" name="lastname" size="15" value="<?php echo $laname?>"/> <br> <br>  
-<span class="errors">
-<?php
-if(isset($errlaname))
-echo $errlaname;
-?>
+<input type="text" placeholder="Last name" name="lastname" size="15" /> <br> <br>  
 <br><br>
-</span>
-<label>   
-Course :  
-</label>   
-<select>  
-<option name="course" value="Course">Course</option>  
-<option name="course" value="BCA">BCA</option>  
-<option name="course" value="BBA">BBA</option>  
-<option name="course" value="B.Tech">B.Tech</option>  
-<option name="course" value="MBA">MBA</option>  
-<option name="course" value="MCA">MCA</option>  
-<option name="course" value="M.Tech">M.Tech</option>  
-</select>  
-<span class="errors">
-<?php 
-if(isset($errcourse))
-echo $errcourse;
-?>
-<br><br>
-</span>
-<label>   
-Gender :  
-</label><br>  
-<input type="radio" name="gender" value="male"/> Male <br>  
-<input type="radio" name="gender" value="female"/> Female <br>  
-<input type="radio" name="gender" value="other"/> Other  
-<br> 
-<span class="errors">
-<?php
-echo $errgender;
-?>
-<br><br>
-</span> 
-<label>   
-Phone :  
-</label><br>
-<input style="width: 80px;" type="text" name="country code"  value="+383" size="3"/>   
-<input style="width: 50%;" type="text" name="phone" size="10"/> <br> <br>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" value="<?php echo $email?>"/>
+    <input type="text" placeholder="Enter Email" name="email" value="<?php echo $email; ?>"/>
     <span class="errors">
-    <?php
-    echo $erremail;
-    ?>
+  
     <br><br>
     </span>
 
-    <form action="/action_page.php" method="get">
-      Password: <input type="password" name="Password">
+    <label>
+      Password: </label><input type="password" name="Password">
        <keygen name="security">
-    </form>
+    
 
-    <form action="/action_page.php" method="get">
-      Repeat password: <input type="password" name="repeat">
-       <keygen name="security">
-    </form>
+   <br><br>
+    <label for="repeatp"><b>Repeat password</b></label>
+    <input type="password"  name="repeatp" >
     <span class="errors">
-    </span>
     
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -281,18 +162,9 @@ Phone :
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>/
+      <button type="submit" class="signupbtn" name="signup">Sign Up</button>
     </div>
-    <?php
-echo "<h2>Your Input:</h2>";
-echo $firstname;
-echo "<br>";
-echo $laname;
-echo "<br>";
-echo $email;
-echo "<br>";
 
-?>
 
   </div>
 </form>

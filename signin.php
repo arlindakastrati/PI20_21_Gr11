@@ -1,8 +1,10 @@
+<?php include('conect.php');?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Sign In</title>
 
 <style>
@@ -132,26 +134,24 @@ li a {
 <div id="box">
       <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
         <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">Sign In</p>
-      
-
         
       </div>
     </div>
       <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <form action="#" method="post" onsubmit="return validate()">
+      <form action="signin.php" method="post" onsubmit="return validate()">
+      <?php include('errors.php');?>
         <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
-
   
   <div class="container" style="color: white;">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" id="uname">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Username" name="email" id="email" value="<?php echo $email; ?> ">
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw">
+    <input type="password" placeholder="Enter Password" name="Password" id="Password">
         
-    <button type="submit">Login</button>
+    <button type="submit" name="signin">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
