@@ -95,6 +95,10 @@ h1>li::after {
       
     </div> 
 
+    <?php
+     // echo "Today is " . date("Y/m/d") . "<br>";
+    ?>
+    
     <h3 id="data" style=" border: none; margin-top: 120px;margin-left: 20px; "></j3>
       <script>
        var d = new Date();
