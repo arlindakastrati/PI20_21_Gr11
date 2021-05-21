@@ -377,13 +377,14 @@ $pattern = '/parts/i';
 echo preg_replace($pattern, 'fields', $str);
 ?>
 <br></br>
-
+<div style="
+    background-color: rgba(211, 211, 211, 0.2);" class="column"  style="float: left;" style="width: 250px; margin-top: -15px; margin-bottom:-10px;"  >
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 <div class="content" style="color: black;">
-  First Name: <input type="text" name="Name"  placeholder="Your name.." >
+  First Name: <input type="text" name="Name"  placeholder="Your name.." onkeyup="showHint(this.value)" >
   <span class="error">* <?php echo $NameErr;?></span>
   <br><br>
- Last Name: <input type="text" name="LastName" placeholder="Your last name..">
+ Last Name: <input type="text" name="LastName" placeholder="Your last name.." onkeyup="showHinti(this.value)">
   <span class="error">* <?php echo $LastNameErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email">
@@ -396,6 +397,7 @@ echo preg_replace($pattern, 'fields', $str);
       <input type="submit" name="submit" value="Submit">  
       </div></div>
       </form>
+<p style="border-radius: 0%;">Suggestions: <span id="txtHint"></span></p>
 
 <br></br>
 <br></br>
