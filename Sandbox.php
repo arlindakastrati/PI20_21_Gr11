@@ -38,14 +38,14 @@
                         </div>
                       </div>
                       <a href="events.html" ><li>EVENTS</li></a>
-                      <a href="competitions.html" ><li>COMPETITIONS</li></a>
-                      <a href="contact.html" ><li>CONTACT</li></a>
+                      <a href="competitions.php" ><li>COMPETITIONS</li></a>
+                      <a href="contact.php" ><li>CONTACT</li></a>
                       <div class="dropdown">
                         <button class="dropbtn"><a href="#"><li>OTHER</li></a>
                             <div class="dropdown"></button>
                         <div class="dropdown-content">
-                          <a href="Jobs.html">JOBS</a>
-                          <a href="startup.html">START-UP</a>
+                          <a href="Jobs.php">JOBS</a>
+                          <a href="startup.php">START-UP</a>
                           <a href="about1.html">ABOUT</a>
                           <a href="ourteam.html">OUR TEAM</a>
                           
