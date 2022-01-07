@@ -7,7 +7,7 @@ $repeatp = "";
 $email = "";
 $errors=array();
 // Create connection
-$conn = mysqli_connect("localhost", "root","lqsym","dbregistration");
+$conn = mysqli_connect("localhost", "root","*****","dbregistration");
 // Check connection
 
 
